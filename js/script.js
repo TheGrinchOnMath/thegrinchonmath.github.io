@@ -1,4 +1,4 @@
-console.log("script loaded!")
+console.log("script loaded!");
 let div = document.createElement("div");
-let body = document.getElementsById("body");
+let body = document.getElementById("body");
 console.log(body);
