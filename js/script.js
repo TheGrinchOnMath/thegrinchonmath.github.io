@@ -7,7 +7,33 @@ add function: read json and output faction list for each side,
 era list for each faction and the motorpool data in an as of yet undefined form
 */
 
-let body = document.getElementById("body");
+const body = document.getElementById("body");
+body.innerHTML = "<p>script.js loaded successfully</p>";
+
+const vehiclePath = "./json/motorpool.json";
+const factionsPath = "./json/factions.json";
+
+
+async function openJson(path) {
+	const request = path;
+	const response = await fetch(request);
+	const data = await response.json();
+	console.log(data);
+	return data;
+}
+
+function parse(vehiclePath, factionsPath) {
+	// create objects from json files at vehiclePath and factionPath
+	const vehicleDataRaw = require(vehiclePath);
+	const factionsDataRaw = require(factionsPath);
+	const vehicleMap = new Map();
+	/*
+	for (i = o; i < vehicleDataRaw.length; i++) {
+	
+	}
+	*/
+	console.log(vehicleDataRaw[100], "\n", factionsDataRaw[0]);
+}
 
 // this function creates buttons inside the sides div corresponding to the strings inside the list given to the function
 function sides(sideList) {
@@ -66,4 +92,6 @@ function eras(eraList) {
 	}
 }
 
-sides(["BLUFOR", "OPFOR", "INDEP", "CIVILIAN"]);
+//sides(["BLUFOR", "OPFOR", "INDEP", "CIVILIAN"]);
+//parse(vehiclePath, factionsPath);
+openJson(vehiclePath);
