@@ -1,97 +1,119 @@
 /*
-console.log("script loaded!");
-let div = document.createElement("div");
-console.log(body);
-
-add function: read json and output faction list for each side, 
-era list for each faction and the motorpool data in an as of yet undefined form
+script for the motorpool tool
 */
 
-const body = document.getElementById("body");
-body.innerHTML = "<p>script.js loaded successfully</p>";
-
-const vehiclePath = "./json/motorpool.json";
-const factionsPath = "./json/factions.json";
-
-
-async function openJson(path) {
-	const request = path;
-	const response = await fetch(request);
-	const data = await response.json();
-	console.log(data);
-	return data;
+// this function has to open the json file
+async function openJson(pathToFile) {
+	this;
 }
 
-function parse(vehiclePath, factionsPath) {
-	// create objects from json files at vehiclePath and factionPath
-	const vehicleDataRaw = require(vehiclePath);
-	const factionsDataRaw = require(factionsPath);
-	const vehicleMap = new Map();
-	/*
-	for (i = o; i < vehicleDataRaw.length; i++) {
-	
-	}
-	*/
-	console.log(vehicleDataRaw[100], "\n", factionsDataRaw[0]);
-}
+/* 
+this function is dedicated to creating a button DOM in the html
+the context manager uses context as input, and the function then takes input:data and can be called using context.input
+*/
 
-// this function creates buttons inside the sides div corresponding to the strings inside the list given to the function
-function sides(sideList) {
-	let factions = document.getElementById("factions");
-	let eras = document.getElementById("eras");
-	if (factions != null) {
-		//same here
-	}
-	if (eras != null) {
-		//add expression that hides the eras div and empties it of its contents
-	}
-	if (document.getElementById("sides") == null) {
-		let sidesDiv = document.createElement("div");
-		sidesDiv.setAttribute("id", "sides");
-	}
-	body.insertAdjacentElement("beforeend", sidesDiv);
-	for (i = 0; i < sideList.length; i++) {
-		var button = document.createElement("button");
-		button.setAttribute("id", sideList[i]);
+function createButton(id, parent, position, func, params) {
+	// check if the button already exists
+	let buttonExists = !!document.getElementById(id);
+
+	// this if condition checks if some variables are given
+	if (
+		buttonExists &&
+		id != null &&
+		parent != null &&
+		func != null &&
+		params != null
+	) {
+		let parent = document.getElementById(parent);
+
+		// create button and set attributes, add event listener (replaces onclick + its better)
+		let button = document.createElement("button");
+		button.setAttribute("id", id);
 		button.setAttribute("type", "button");
-		button.innerText = sideList[i];
-		sidesDiv.insertAdjacentElement("beforeend", button);
+		button.addEventListener("click", function () {
+			func, params;
+		});
+
+		// add button inside the parent div
+		parent.insertAdjacentElement(position, button);
+	} else {
+		console.log("ERROR: wrong input, aborting...");
+		return;
 	}
 }
 
-// the input needs to be changed to the side
-function factions(factionsList) {
-	let eras = document.getElementById("eras");
-	let factionsDiv = document.createElement("div");
-	if (document.getElementByID("factions") == null) {
-		factionsDiv.setAttribute("id", "factions");
-		body.insertAdjacentElement("beforeend", factionsDiv);
-	}
-	for (i = 0; i < factionsList.length; i++) {
-		var button = document.createElement("button");
-		button.setAttribute("id", factionsList[i]);
-		button.setAttribute("type", "button");
-		button.innerText = factionsList[i];
-		factionsDiv.insertAdjacentElement("beforeend", button);
-	}
-	factionsDiv.hidden = false;
-}
+/* 
+is called upon loading the page. creates side buttons
+*/
+function initSides(sideList) {
+	// create objects corresponding to the factions and eras, empty them
+	let factionDiv = document.getElementById("factions");
+	let eraDiv = document.getElementById("eras");
 
-function eras(eraList) {
-	let erasDiv = document.createElement("div");
-	if (document.getElementById("eras") == null)
-		erasDiv.setAttribute("id", "eras");
-	body.insertAdjacentElement("beforeend", erasDiv);
+	// removes all of the DOM elements inside the div with id="factions"
+	for (const child of factionDiv.children) {
+		child.remove();
+	}
 
-	for (i = 0; i < eraList.length; i++) {
-		var button = document.createElement("button");
-		button.setAttribute("id", eraList[i]);
-		button.setAttribute("type", "button");
-		button.innerText = eraList[i];
-		erasDiv.insertAdjacentElement("beforeend", button);
+	// removes all of the DOM elements inside the div with id="eras"
+	for (const child of eraDiv.children) {
+		child.remove();
+	}
+
+	// iterate through sideList, create buttons for each side
+	for (elm = 0; elm < sideList.length; elm++) {
+		createButton(
+			sideList[elm],
+			"sides",
+			"beforeend",
+			factions /* add the input for the factions function here */
+		);
 	}
 }
 
-//sides(["BLUFOR", "OPFOR", "INDEP", "CIVILIAN"]);
-//parse(vehiclePath, factionsPath);
-openJson(vehiclePath);
+/*
+sides() is called when a side button is clicked
+
+function sides() {
+
+}
+*/
+
+// create factions based on which side was called
+function factions(side) {
+	// removes all of the DOM elements inside the div with id="factions"
+    let factionDiv = document.getElementById("factions");
+	for (const child of factionDiv.children) {
+		child.remove();
+	}
+
+	// remove all of the DOM elements inside the div with id="eras"
+	let eraDiv = document.getElementById("eras");
+	for (const child of eraDiv.children) {
+		child.remove();
+	}
+
+	/* create buttons for every faction in side
+    for (elm = 0; elm < factionList.length; elm++) {
+        createButton(factionList[elm], "factions", "beforeend", eras);
+    } 
+    */
+}
+
+// create eras based on the called faction
+function eras(faction) {
+	this;
+}
+
+/*
+parses motorpool and factions json and returns several objects.
+objects:
+- list of factions for every side
+- list of eras for every faction
+- something that stores motorpool data
+
+generated object 1: dict of dicts. structure: {side1:{faction1:{era1, era2, era3, era4}, faction2:{era1}}, side2:{faction1}}
+*/
+function parseData(path1, path2) {
+	this;
+}
