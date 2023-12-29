@@ -2,16 +2,66 @@
 script for the motorpool tool
 */
 
-// this function has to open the json file
-async function openJson(pathToFile) {
-	this;
+/*
+below function parses motorpool and factions json and returns several objects.
+objects:
+- list of factions for every side
+- list of variants for every faction
+- something that stores motorpool data
+
+generated object 1: dict of dicts. structure: {side1:{faction1:{era1, era2, era3, era4}, faction2:{era1}}, side2:{faction1}}
+*/
+async function parse(factionsPath, motorpoolPath = null) {
+	// parse factions Json
+	const request = await fetch(factionsPath);
+	const response = await request.json();
+
+	// create a list of blufor factions
+	let bluforFactions = [];
+	for (let i = 0; i < response.blufor.length; i++) {
+		bluforFactions.push(response.blufor[i].name);
+	}
+
+	let bluforFactionsDict = new Object();
+	for (let i = 0; i < response.blufor; i++) {
+		this;
+	}
+}
+
+// this function parses the json obj to get a dict.
+function parseFactions(json) {
+	const sides = {blufor:[], opfor:[], indep:[]}; // JSON contains: side:faction:variants/name:motorpool/name/era:vehicles:vehicle
+	
+	// fill blufor with data
+	
+	/*
+	add here: some kind of loop contraption that reads the json and fills the required data into sides. the idea is to make the data easily accessible later.
+	*/
+
+	return sides;
+}
+
+//this function parses the motorpool json obj into a map obj, with the ID being the name,
+//and the other informations inside a list being the value
+function parseMotorpool(json) {
+	out = new Map();
+	for (let i = 0; i < json.length; i++) {
+		Map[json[i].id] = [
+			json[i].name,
+			json[i].type,
+			json[i].crew,
+			json[i].passengers,
+			json[i].cargo,
+			json[i].turrets,
+		];
+	}
+	return out;
 }
 
 /* 
 this function is dedicated to creating a button DOM in the html
 the context manager uses context as input, and the function then takes input:data and can be called using context.input
 */
-
 function createButton(id, parent, position, func, params) {
 	// check if the button already exists
 	let buttonExists = !!document.getElementById(id);
@@ -46,16 +96,16 @@ function createButton(id, parent, position, func, params) {
 is called upon loading the page. creates side buttons
 */
 function initSides(sideList) {
-	// create objects corresponding to the factions and eras, empty them
+	// create objects corresponding to the factions and variants, empty them
 	let factionDiv = document.getElementById("factions");
-	let eraDiv = document.getElementById("eras");
+	let eraDiv = document.getElementById("variants");
 
 	// removes all of the DOM elements inside the div with id="factions"
 	for (const child of factionDiv.children) {
 		child.remove();
 	}
 
-	// removes all of the DOM elements inside the div with id="eras"
+	// removes all of the DOM elements inside the div with id="variants"
 	for (const child of eraDiv.children) {
 		child.remove();
 	}
@@ -82,38 +132,34 @@ function sides() {
 // create factions based on which side was called
 function factions(side) {
 	// removes all of the DOM elements inside the div with id="factions"
-    let factionDiv = document.getElementById("factions");
+	let factionDiv = document.getElementById("factions");
 	for (const child of factionDiv.children) {
 		child.remove();
 	}
 
-	// remove all of the DOM elements inside the div with id="eras"
-	let eraDiv = document.getElementById("eras");
+	// remove all of the DOM elements inside the div with id="variants"
+	let eraDiv = document.getElementById("variantsf");
 	for (const child of eraDiv.children) {
 		child.remove();
 	}
 
 	/* create buttons for every faction in side
     for (elm = 0; elm < factionList.length; elm++) {
-        createButton(factionList[elm], "factions", "beforeend", eras);
+        createButton(factionList[elm], "factions", "beforeend", variants);
     } 
     */
 }
 
-// create eras based on the called faction
-function eras(faction) {
+// create variants based on the called faction
+function variants(faction) {
 	this;
 }
 
-/*
-parses motorpool and factions json and returns several objects.
-objects:
-- list of factions for every side
-- list of eras for every faction
-- something that stores motorpool data
+//----------VARIABLES----------//
+const factionsPath = "../json/factions.json";
+const motorpoolPath = "../json/motorpool.json";
+//-----------------------------//
 
-generated object 1: dict of dicts. structure: {side1:{faction1:{era1, era2, era3, era4}, faction2:{era1}}, side2:{faction1}}
-*/
-function parseData(path1, path2) {
-	this;
-}
+//------------TESTING BELOW HERE FOR READABILITY--------------//
+
+parse(factionsPath);
