@@ -17,23 +17,30 @@ async function parse(factionsPath, motorpoolPath = null) {
 	const response = await request.json();
 
 	// create a list of blufor factions
-	let bluforFactions = [];
-	for (let i = 0; i < response.blufor.length; i++) {
-		bluforFactions.push(response.blufor[i].name);
-	}
-
-	let bluforFactionsDict = new Object();
-	for (let i = 0; i < response.blufor; i++) {
-		this;
-	}
+	parseFactions(response);
 }
 
 // this function parses the json obj to get a dict.
 function parseFactions(json) {
-	const sides = {blufor:[], opfor:[], indep:[]}; // JSON contains: side:faction:variants/name:motorpool/name/era:vehicles:vehicle
-	
+	const sides = { blufor: {}, opfor: {}, indep: {} }; // JSON contains: side:faction:variants/name:motorpool/name/era:vehicles:vehicle
+	// sides should look like this: sides.blufor.factionName.variant
+	// sides.blufor["woodland modern"] = []
+	// sides.blufor.["woodland modern"].push([])
 	// fill blufor with data
-	
+	for (let ctr = 0; ctr < json.blufor.length; ctr++) {
+		let name = json.blufor[ctr].name;
+		let id = name;
+		id.replace(" ", "_");
+		sides.blufor[id] = [];
+		for (let count = 0; count < json.blufor[ctr].variants.length; count++)
+			sides.blufor[id].push([
+				json.blufor[ctr].variants[count].name,
+				json.blufor[ctr].variants[count].era,
+			]);
+	}
+	console.log(sides.blufor);
+	// json.side[index].name gets the faction name
+
 	/*
 	add here: some kind of loop contraption that reads the json and fills the required data into sides. the idea is to make the data easily accessible later.
 	*/
