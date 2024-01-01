@@ -2,22 +2,32 @@
 script for the motorpool tool
 */
 
-/*
-below function parses motorpool and factions json and returns several objects.
-objects:
-- list of factions for every side
-- list of variants for every faction
-- something that stores motorpool data
+//Global Variables
+let factionsTree = null,
+	motorpoolMap = null;
 
-generated object 1: dict of dicts. structure: {side1:{faction1:{era1, era2, era3, era4}, faction2:{era1}}, side2:{faction1}}
-*/
-async function parse(factionsPath, motorpoolPath = null) {
+
+async function parse(factionsPath, motorpoolPath) {
+	factionsTree = await parseJson(factionsPath);
+	motorpoolMap = await parseMotorpool(parseJson(motorpoolPath));
+
+	let sides = new Array();
+	for (let side in factionsTree) {
+		sides.push(side);
+	}
+	initSides(sides);
+	initFactions("blufor");
+	variants(factionsTree.blufor[0])
+}
+
+
+async function parseJson(path) {
 	// parse factions Json
-	const request = await fetch(factionsPath);
+	const request = await fetch(path);
 	const response = await request.json();
 
 	// create a list of blufor factions
-	parseFactions(response);
+	return response;
 }
 
 // this function parses the json obj to get a dict.
@@ -75,24 +85,25 @@ function createButton(id, parent, position, func, params) {
 
 	// this if condition checks if some variables are given
 	if (
-		buttonExists &&
+		/*buttonExists &&*/
 		id != null &&
 		parent != null &&
 		func != null &&
 		params != null
 	) {
-		let parent = document.getElementById(parent);
+		let parentDOM = document.getElementById(parent);
 
 		// create button and set attributes, add event listener (replaces onclick + its better)
 		let button = document.createElement("button");
 		button.setAttribute("id", id);
 		button.setAttribute("type", "button");
 		button.addEventListener("click", function () {
-			func, params;
+			func(params);
 		});
+		button.innerText = id;
 
 		// add button inside the parent div
-		parent.insertAdjacentElement(position, button);
+		parentDOM.insertAdjacentElement(position, button);
 	} else {
 		console.log("ERROR: wrong input, aborting...");
 		return;
@@ -105,7 +116,7 @@ is called upon loading the page. creates side buttons
 function initSides(sideList) {
 	// create objects corresponding to the factions and variants, empty them
 	let factionDiv = document.getElementById("factions");
-	let eraDiv = document.getElementById("variants");
+	let variantDiv = document.getElementById("variants");
 
 	// removes all of the DOM elements inside the div with id="factions"
 	for (const child of factionDiv.children) {
@@ -113,18 +124,14 @@ function initSides(sideList) {
 	}
 
 	// removes all of the DOM elements inside the div with id="variants"
-	for (const child of eraDiv.children) {
+	for (const child of variantDiv.children) {
 		child.remove();
 	}
 
 	// iterate through sideList, create buttons for each side
-	for (elm = 0; elm < sideList.length; elm++) {
-		createButton(
-			sideList[elm],
-			"sides",
-			"beforeend",
-			factions /* add the input for the factions function here */
-		);
+	for (let elm = 0; elm < sideList.length; elm++) {
+		let side = sideList[elm];
+		createButton(side, "sides", "beforeend", initFactions, side);
 	}
 }
 
@@ -137,7 +144,7 @@ function sides() {
 */
 
 // create factions based on which side was called
-function factions(side) {
+function initFactions(side) {
 	// removes all of the DOM elements inside the div with id="factions"
 	let factionDiv = document.getElementById("factions");
 	for (const child of factionDiv.children) {
@@ -145,11 +152,21 @@ function factions(side) {
 	}
 
 	// remove all of the DOM elements inside the div with id="variants"
-	let eraDiv = document.getElementById("variantsf");
-	for (const child of eraDiv.children) {
+	let variantDiv = document.getElementById("variants");
+	for (const child of variantDiv.children) {
 		child.remove();
 	}
+	let sideData = factionsTree[side];
+	let factionList = [];
+	for (let t = 0; t < sideData.length; t++) {
+		factionList.push(sideData[t]);
+	}
 
+	for (let elm = 0; elm < factionList.length; elm++) {
+		let faction = factionList[elm];
+		let id = faction.name;
+		createButton(id, "factions", "beforeend", variants, faction);
+	}
 	/* create buttons for every faction in side
     for (elm = 0; elm < factionList.length; elm++) {
         createButton(factionList[elm], "factions", "beforeend", variants);
@@ -159,7 +176,13 @@ function factions(side) {
 
 // create variants based on the called faction
 function variants(faction) {
-	this;
+	// remove all of the DOM elements inside the div with id="variants"
+	let variantDiv = document.getElementById("variants");
+	for (const child of variantDiv.children) {
+		child.remove();
+	}
+
+	console.log(faction);
 }
 
 //----------VARIABLES----------//
@@ -169,4 +192,6 @@ const motorpoolPath = "../json/motorpool.json";
 
 //------------TESTING BELOW HERE FOR READABILITY--------------//
 
-parse(factionsPath);
+parse(factionsPath, motorpoolPath)
+
+
