@@ -119,6 +119,30 @@ function removeChildren(id) {
 	}
 }
 
+async function image(id, parent, position, url) {
+	// get the node of the parent, create image node
+	const parentDOM = document.getElementById(parent);
+	let imageDOM = document.createElement("img");
+
+	// set attributes
+	imageDOM.setAttribute("id", id);
+	imageDOM.setAttribute("src", url);
+
+	// add image to parent DOM
+	parentDOM.insertAdjacentElement(position, imageDOM);
+}
+
+function randomImage(id, parent, position) {
+	// get the node of the parent, create image node
+	const parentDOM = document.getElementById(parent);
+	let imageDOM = document.createElement("img");
+
+	// set attributes
+	imageDOM.setAttribute("id", id);
+	imageDOM.setAttribute("src", "https://cataas.com/cat?width=:256&height=:256");
+
+	parentDOM.insertAdjacentElement(position, imageDOM);
+}
 /* 
 is called upon loading the page. creates side buttons
 */
@@ -152,18 +176,14 @@ function initFactions(side) {
 	// remove all of the DOM elements inside the div with id="variants"
 	removeChildren("variants");
 
-	for (let i = 0; i < factionsTree[side].length; i++) {}
-
+	// create variable to avoid weird and complex syntax
+	// for a direct call to factionsTree
 	let sideData = factionsTree[side];
-	let factionList = [];
 
-	for (let t = 0; t < sideData.length; t++) {
-		factionList.push(sideData[t]);
-	}
-	console.log(sideData, "\n", factionList, "\n", sideData == factionList);
-
-	for (let elm = 0; elm < factionList.length; elm++) {
-		let faction = factionList[elm];
+	// create a button for every faction of the side, with the label
+	// being the faction name
+	for (let i = 0; i < factionsTree[side].length; i++) {
+		let faction = sideData[i];
 		let id = faction.name;
 		createButton(id, "factions", "beforeend", variants, faction);
 	}
@@ -174,20 +194,36 @@ function variants(faction) {
 	// remove all of the DOM elements inside the div with id="variants"
 	removeChildren("variants");
 
-	// create variant buttons
+	// remove all of the DOM elements inside the div with id="content"
+	removeChildren("content");
 
+	// create variant buttons
 	let variantList = faction.variants;
 	for (let i = 0; i < variantList.length; i++) {
 		let variant = variantList[i];
 		let str = variant.name + " " + variant.era;
-		createButton(str, "variants", "beforeend", generateContent, true);
+		createButton(str, "variants", "beforeend", generateContent, variant);
 	}
 }
 
-async function generateContent(run) {
-	if (run) {
-		console.log("variant button pushed");
+/*
+this function has the task of generating the content of the variant.
+This includes the vehicle stats, an image and the input.
+*/
+async function generateContent(variant) {
+	// get all vehicle groups
+
+	for (let i = 0; i < variant.motorpool.length; i++) {
+		const vehicleGroup = variant.motorpool[i];
+		groupDiv = document.createElement("div");
+		groupDiv.setAttribute("id", vehicleGroup.name);
 	}
+
+	console.log(variant);
+
+	const url = "https://cataas.com/cat?width=:256&height=:256";
+	const id = "image";
+	parent = "";
 }
 
 //----------VARIABLES----------//

@@ -1,0 +1,33 @@
+#sides {
+    /*setup the flexbox to be vertical*/
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+
+	color: "green";
+}
+#factions {
+    /*setup the flexbox to be vertical*/
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+
+    color: "red";
+}
+#variants {
+    /*setup the flexbox to be vertical*/
+    display: flex;
+    flex-direction: column;
+
+    color: "blue";
+    padding: 10px;
+}
+#buttonContainer {
+    
+    /*setup the flexbox to be vertical*/
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
