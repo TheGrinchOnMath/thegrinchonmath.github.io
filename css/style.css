@@ -1,33 +1,55 @@
-#sides {
-    /*setup the flexbox to be vertical*/
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+button {
+	background-color: darkgrey;
+	border: none;
+}
 
+body {
+	background-color: darkslategrey;
+	color: darkslategrey;
+}
+
+#sides {
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
 
 	color: "green";
 }
 #factions {
-    /*setup the flexbox to be vertical*/
-    display: flex;
-    flex-direction: column;
-    
-    padding: 10px;
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
 
-    color: "red";
+	padding: 10px;
+
+	color: "red";
 }
 #variants {
-    /*setup the flexbox to be vertical*/
-    display: flex;
-    flex-direction: column;
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
 
-    color: "blue";
-    padding: 10px;
+	color: "blue";
+	padding: 10px;
 }
 #buttonContainer {
-    
-    /*setup the flexbox to be vertical*/
-    display: flex;
-    flex-direction: row;
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+}
+p {
+	color: black;
+	background-color: rgb(89, 91, 91);
+}
+#vehicleContainer {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(219, 100, 15);
+    margin-bottom: 10px;
+}
+
+img {
     padding: 10px;
 }
