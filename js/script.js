@@ -6,7 +6,6 @@ script for the motorpool tool
 let factionsTree = null,
 	motorpoolMap = null;
 
-
 async function parse(factionsPath, motorpoolPath) {
 	factionsTree = await parseJson(factionsPath);
 	motorpoolMap = await parseMotorpool(parseJson(motorpoolPath));
@@ -17,9 +16,8 @@ async function parse(factionsPath, motorpoolPath) {
 	}
 	initSides(sides);
 	initFactions("blufor");
-	variants(factionsTree.blufor[0])
+	variants(factionsTree.blufor[0]);
 }
-
 
 async function parseJson(path) {
 	// parse factions Json
@@ -110,23 +108,26 @@ function createButton(id, parent, position, func, params) {
 	}
 }
 
+/* removes all children of a DOM element. Modified code from: https://stackoverflow.com/a/3955238
+calling node.children and iterating does not work, 
+but checking if the node has a child and then deleting the last child works really well
+*/
+function removeChildren(id) {
+	const node = document.getElementById(id);
+	while (node.firstChild) {
+		node.removeChild(node.lastChild);
+	}
+}
+
 /* 
 is called upon loading the page. creates side buttons
 */
 function initSides(sideList) {
-	// create objects corresponding to the factions and variants, empty them
-	let factionDiv = document.getElementById("factions");
-	let variantDiv = document.getElementById("variants");
-
 	// removes all of the DOM elements inside the div with id="factions"
-	for (const child of factionDiv.children) {
-		child.remove();
-	}
+	removeChildren("variants");
 
 	// removes all of the DOM elements inside the div with id="variants"
-	for (const child of variantDiv.children) {
-		child.remove();
-	}
+	removeChildren("variants");
 
 	// iterate through sideList, create buttons for each side
 	for (let elm = 0; elm < sideList.length; elm++) {
@@ -146,41 +147,36 @@ function sides() {
 // create factions based on which side was called
 function initFactions(side) {
 	// removes all of the DOM elements inside the div with id="factions"
-	let factionDiv = document.getElementById("factions");
-	for (const child of factionDiv.children) {
-		child.remove();
-	}
+	removeChildren("factions");
 
 	// remove all of the DOM elements inside the div with id="variants"
-	let variantDiv = document.getElementById("variants");
-	for (const child of variantDiv.children) {
-		child.remove();
+	removeChildren("variants");
+
+	for (let i = 0; i < factionsTree[side].length; i++) {
+		
 	}
+	
 	let sideData = factionsTree[side];
 	let factionList = [];
+	
+
 	for (let t = 0; t < sideData.length; t++) {
 		factionList.push(sideData[t]);
 	}
+	console.log(sideData, "\n", factionList, "\n", sideData == factionList);
+
 
 	for (let elm = 0; elm < factionList.length; elm++) {
 		let faction = factionList[elm];
 		let id = faction.name;
 		createButton(id, "factions", "beforeend", variants, faction);
 	}
-	/* create buttons for every faction in side
-    for (elm = 0; elm < factionList.length; elm++) {
-        createButton(factionList[elm], "factions", "beforeend", variants);
-    } 
-    */
 }
 
 // create variants based on the called faction
 function variants(faction) {
 	// remove all of the DOM elements inside the div with id="variants"
-	let variantDiv = document.getElementById("variants");
-	for (const child of variantDiv.children) {
-		child.remove();
-	}
+	removeChildren("variants");
 
 	console.log(faction);
 }
@@ -192,6 +188,4 @@ const motorpoolPath = "../json/motorpool.json";
 
 //------------TESTING BELOW HERE FOR READABILITY--------------//
 
-parse(factionsPath, motorpoolPath)
-
-
+parse(factionsPath, motorpoolPath);
