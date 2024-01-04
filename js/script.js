@@ -7,6 +7,8 @@ let factionsTree = null,
 	motorpoolMap = new Map(),
 	motorpoolTree = null;
 
+let totalCrew = 0, totalPassengers = 0, totalCargo = 0;
+
 async function parse(factionsPath, motorpoolPath) {
 	factionsTree = await parseJson(factionsPath);
 	motorpoolTree = await parseJson(motorpoolPath);
@@ -133,6 +135,55 @@ function randomImage(id, parent, position) {
 	parentDOM.insertAdjacentElement(position, imageDOM);
 }
 
+function fillData(vehicles) {
+	for (let j = 0; j < vehicles.length; j++) {
+		//console.log(vehicles[j].id, vehicles[j].cargo);
+		//console.log(motorpoolMap.get(vehicles[j].id));
+
+		const data = motorpoolMap.get(vehicles[j].id);
+		// avoid errors cropping up when data is undefined
+		if (data == undefined) {
+			console.log(data, vehicles[j].id, motorpoolMap.get(vehicles[j].id));
+			console.log(vehicles[13]);
+			console.log("data is undefined");
+		} else if (data != undefined) {
+			//construct string to display inside of vehicleData
+			const string =
+				"Name: " +
+				data[0] +
+				"\tType: " +
+				data[1] +
+				"<br/>Crew: " +
+				data[2] +
+				"\tPassengers: " +
+				data[3] +
+				"<br/>cargo:" +
+				vehicles[j].cargo;
+			if (data[4].length > 0) {
+				string.concat("<br/>", data[4]);
+			}
+			// create vehicle div, add to page
+			let vehicleDiv = document.createElement("div");
+			vehicleDiv.setAttribute("id", "vehicleContainer");
+			contentDiv.insertAdjacentElement("afterbegin", vehicleDiv);
+
+			// create vehicleData p, add string created earlier
+			let vehicleData = document.createElement("p");
+			vehicleData.innerHTML = string;
+
+			// create image img, add src and alt attributes
+
+			let image = document.createElement("img");
+			image.setAttribute("src", "https://cataas.com/cat?width=128&height=128"); // this url needs to be that of the image
+			image.setAttribute("alt", " placeholder text");
+
+			// add image and vehicleDiv to vehicleData
+			vehicleDiv.insertAdjacentElement("afterbegin", image);
+			vehicleDiv.insertAdjacentElement("beforeend", vehicleData);
+		}
+	}
+}
+
 /* 
 is called upon loading the page. creates side buttons
 */
@@ -210,47 +261,7 @@ async function generateContent(variant) {
 
 		// start iterating through the vehicles
 		const vehicles = vehicleGroup.vehicles;
-
-		for (let j = 0; j < vehicles.length; j++) {
-			//console.log(vehicles[j].id, vehicles[j].cargo);
-			//console.log(motorpoolMap.get(vehicles[j].id));
-
-			const data = motorpoolMap.get(vehicles[j].id);
-			// avoid errors cropping up when data is undefined
-			if (data == undefined) {
-				console.log(data, vehicles[j].id, motorpoolMap.get(vehicles[j].id));
-				console.log(vehicles[13]);
-				console.log("data is undefined");
-			} else if (data != undefined) {
-				//construct string to display inside of vehicleData
-				const string =
-					"Name: " +
-					data[0] +
-					"\tType: " +
-					data[1] +
-					"<br/>Crew: " +
-					data[2] +
-					"\tPassengers: " +
-					data[3] +
-					"<br/>cargo:" +
-					vehicles[j].cargo;
-				if (data[4].length > 0) {
-					string.concat("<br/>", data[4]);
-				}
-				// create and fill DOM elements
-				let vehicleDiv = document.createElement("div"),
-					vehicleData = document.createElement("p");
-				vehicleDiv.setAttribute("id", "vehicleContainer");
-				contentDiv.insertAdjacentElement("afterbegin", vehicleDiv);
-				vehicleData.innerHTML = string;
-				
-				let image = document.createElement("img");
-				image.setAttribute("src", "https://cataas.com/cat?width=128&height=128")
-				image.setAttribute("alt", " placeholder text");
-				vehicleDiv.insertAdjacentElement("afterbegin", image);
-				vehicleDiv.insertAdjacentElement("beforeend", vehicleData);
-			}
-		}
+		fillData(vehicles);
 	}
 }
 

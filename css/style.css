@@ -46,10 +46,13 @@ p {
 #vehicleContainer {
 	display: flex;
 	flex-direction: row;
-	background-color: rgb(219, 100, 15);
+	background-color: darkgrey;
     margin-bottom: 10px;
 }
 
 img {
     padding: 10px;
+	border: 2px;
+	border-color: black;
+	border-radius: 1px;
 }
