@@ -152,19 +152,15 @@ function initFactions(side) {
 	// remove all of the DOM elements inside the div with id="variants"
 	removeChildren("variants");
 
-	for (let i = 0; i < factionsTree[side].length; i++) {
-		
-	}
-	
+	for (let i = 0; i < factionsTree[side].length; i++) {}
+
 	let sideData = factionsTree[side];
 	let factionList = [];
-	
 
 	for (let t = 0; t < sideData.length; t++) {
 		factionList.push(sideData[t]);
 	}
 	console.log(sideData, "\n", factionList, "\n", sideData == factionList);
-
 
 	for (let elm = 0; elm < factionList.length; elm++) {
 		let faction = factionList[elm];
@@ -178,7 +174,20 @@ function variants(faction) {
 	// remove all of the DOM elements inside the div with id="variants"
 	removeChildren("variants");
 
-	console.log(faction);
+	// create variant buttons
+
+	let variantList = faction.variants;
+	for (let i = 0; i < variantList.length; i++) {
+		let variant = variantList[i];
+		let str = variant.name + " " + variant.era;
+		createButton(str, "variants", "beforeend", generateContent, true);
+	}
+}
+
+async function generateContent(run) {
+	if (run) {
+		console.log("variant button pushed");
+	}
 }
 
 //----------VARIABLES----------//
