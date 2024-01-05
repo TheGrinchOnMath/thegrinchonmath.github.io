@@ -2,27 +2,30 @@
 script for the motorpool tool
 */
 
-//Global Variables
+//----------Global Variables----------//
 let factionsTree = null,
 	motorpoolMap = new Map(),
 	motorpoolTree = null;
 
-let totalCrew = 0,
-	totalPassengers = 0,
-	totalCargo = 0;
+// this variable will be accessed
+let inputCounter = { passengers: 0, crew: 0, cargo: 0, turrets: [] };
+//------------------------------------//
 
+// this function parses the json files and fills the objects.
+// It also calls initSides().
 async function parse(factionsPath, motorpoolPath) {
 	factionsTree = await parseJson(factionsPath);
 	motorpoolTree = await parseJson(motorpoolPath);
 
 	//----------test----------//
-	//console.log(motorpoolTree[0]);
+
 	//------------------------//
 	let sides = new Array();
 	for (let side in factionsTree) {
 		sides.push(side);
 	}
 
+	// put all of the motorpool json data into the motorpoolMap map object
 	for (let i = 0; i < motorpoolTree.length; i++) {
 		const motorpool = motorpoolTree[i];
 		motorpoolMap.set(motorpool.id, [
@@ -34,7 +37,6 @@ async function parse(factionsPath, motorpoolPath) {
 			motorpool.turrets,
 		]);
 	}
-
 	initSides(sides);
 }
 
@@ -272,13 +274,21 @@ async function generateContent(variant) {
 
 function generateInputs(id, parent) {
 	let newInput = document.createElement("input");
+
 	newInput.setAttribute("type", "number");
 	newInput.setAttribute("max", "10");
 	newInput.setAttribute("min", "0");
 	newInput.setAttribute("id", id);
 	newInput.setAttribute("default", "0");
+	newInput.setAttribute("onchange", function () {
+		parseInputs, newInput.value;
+	});
 	const parentNode = parent;
 	parentNode.insertAdjacentElement("beforeend", newInput);
+}
+
+function parseInputs(value) {
+	console.log(value);
 }
 
 //----------VARIABLES----------//
