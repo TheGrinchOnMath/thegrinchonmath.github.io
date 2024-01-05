@@ -140,7 +140,7 @@ function randomImage(id, parent, position) {
 }
 
 function fillData(vehicles) {
-	const contentDiv = document.getElementById("content");
+	const formDiv = document.getElementById("content");
 
 	for (let j = 0; j < vehicles.length; j++) {
 		//console.log(vehicles[j].id, vehicles[j].cargo);
@@ -171,7 +171,7 @@ function fillData(vehicles) {
 			// create vehicle div, add to page
 			let vehicleDiv = document.createElement("div");
 			vehicleDiv.setAttribute("id", "vehicleContainer");
-			contentDiv.insertAdjacentElement("beforeend", vehicleDiv);
+			formDiv.insertAdjacentElement("beforeend", vehicleDiv);
 
 			// create vehicleData p, add string created earlier
 			let vehicleData = document.createElement("p");
@@ -258,13 +258,13 @@ async function generateContent(variant) {
 		// create new variable for every group in the motorpool.
 		// Create p for group, fetch content div
 		const vehicleGroup = variant.motorpool[i];
-		const contentDiv = document.getElementById("content");
+		const formDiv = document.getElementById("content");
 
 		// create p element, add attributes, content and add to groupDiv
 		let groupTitle = document.createElement("h3");
 		groupTitle.innerText = vehicleGroup.group;
 		groupTitle.id = vehicleGroup.group;
-		contentDiv.insertAdjacentElement("beforeend", groupTitle);
+		formDiv.insertAdjacentElement("beforeend", groupTitle);
 
 		// start iterating through the vehicles
 		const vehicles = vehicleGroup.vehicles;
@@ -280,15 +280,18 @@ function generateInputs(id, parent) {
 	newInput.setAttribute("min", "0");
 	newInput.setAttribute("id", id);
 	newInput.setAttribute("default", "0");
-	newInput.setAttribute("onchange", function () {
-		parseInputs, newInput.value;
-	});
+
 	const parentNode = parent;
 	parentNode.insertAdjacentElement("beforeend", newInput);
 }
 
-function parseInputs(value) {
-	console.log(value);
+/*
+this function gets the quantities of each vehicle, 
+fetches their data based on the input ID and adds the relevant values
+to the inputCounter object.
+*/
+function getFormData() {
+
 }
 
 //----------VARIABLES----------//

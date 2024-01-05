@@ -67,3 +67,8 @@ input {
 	padding: 20px;
 	margin: 30px;
 }
+
+form {
+	color: black;
+	background-color: rgb(100, 100, 100);
+}
