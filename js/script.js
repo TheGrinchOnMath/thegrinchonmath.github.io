@@ -7,7 +7,9 @@ let factionsTree = null,
 	motorpoolMap = new Map(),
 	motorpoolTree = null;
 
-let totalCrew = 0, totalPassengers = 0, totalCargo = 0;
+let totalCrew = 0,
+	totalPassengers = 0,
+	totalCargo = 0;
 
 async function parse(factionsPath, motorpoolPath) {
 	factionsTree = await parseJson(factionsPath);
@@ -136,6 +138,8 @@ function randomImage(id, parent, position) {
 }
 
 function fillData(vehicles) {
+	const contentDiv = document.getElementById("content");
+
 	for (let j = 0; j < vehicles.length; j++) {
 		//console.log(vehicles[j].id, vehicles[j].cargo);
 		//console.log(motorpoolMap.get(vehicles[j].id));
@@ -165,7 +169,7 @@ function fillData(vehicles) {
 			// create vehicle div, add to page
 			let vehicleDiv = document.createElement("div");
 			vehicleDiv.setAttribute("id", "vehicleContainer");
-			contentDiv.insertAdjacentElement("afterbegin", vehicleDiv);
+			contentDiv.insertAdjacentElement("beforeend", vehicleDiv);
 
 			// create vehicleData p, add string created earlier
 			let vehicleData = document.createElement("p");
@@ -180,6 +184,7 @@ function fillData(vehicles) {
 			// add image and vehicleDiv to vehicleData
 			vehicleDiv.insertAdjacentElement("afterbegin", image);
 			vehicleDiv.insertAdjacentElement("beforeend", vehicleData);
+			generateInputs(vehicles[j].id, vehicleDiv);
 		}
 	}
 }
@@ -254,7 +259,7 @@ async function generateContent(variant) {
 		const contentDiv = document.getElementById("content");
 
 		// create p element, add attributes, content and add to groupDiv
-		let groupTitle = document.createElement("p");
+		let groupTitle = document.createElement("h3");
 		groupTitle.innerText = vehicleGroup.group;
 		groupTitle.id = vehicleGroup.group;
 		contentDiv.insertAdjacentElement("beforeend", groupTitle);
@@ -263,6 +268,17 @@ async function generateContent(variant) {
 		const vehicles = vehicleGroup.vehicles;
 		fillData(vehicles);
 	}
+}
+
+function generateInputs(id, parent) {
+	let newInput = document.createElement("input");
+	newInput.setAttribute("type", "number");
+	newInput.setAttribute("max", "10");
+	newInput.setAttribute("min", "0");
+	newInput.setAttribute("id", id);
+	newInput.setAttribute("default", "0");
+	const parentNode = parent;
+	parentNode.insertAdjacentElement("beforeend", newInput);
 }
 
 //----------VARIABLES----------//

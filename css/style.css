@@ -56,3 +56,14 @@ img {
 	border-color: black;
 	border-radius: 1px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	font: arial;
+	margin: 5px;
+}
+
+input {
+	padding: 20px;
+	margin: 30px;
+}
