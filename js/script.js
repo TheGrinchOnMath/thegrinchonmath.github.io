@@ -280,7 +280,7 @@ function parseInputs() {
 			inputCounter.crew += Number(inputData[2]);
 			if (inputData.cargo != -1) {
 				inputCounter.cargo += Number(inputData[4]);
-			}d
+			}
 		}
 	}
 
