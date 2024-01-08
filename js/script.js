@@ -304,7 +304,3 @@ const motorpoolPath = "../json/motorpool.json";
 //------------TESTING BELOW HERE FOR READABILITY--------------//
 
 parse(factionsPath, motorpoolPath);
-console.log(motorpoolMap.get("Car"));
-console.log(typeof 1);
-
-const input = document.querySelector("input");
