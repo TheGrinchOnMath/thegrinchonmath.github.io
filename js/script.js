@@ -7,9 +7,7 @@ let factionsTree = null,
 	motorpoolMap = new Map(),
 	motorpoolTree = null;
 
-let totalCrew = 0,
-	totalPassengers = 0,
-	totalCargo = 0;
+let inputCounter = { passengers: 0, crew: 0, cargo: 0, turrets: [] };
 
 async function parse(factionsPath, motorpoolPath) {
 	factionsTree = await parseJson(factionsPath);
@@ -46,24 +44,6 @@ async function parseJson(path) {
 	// create a list of blufor factions
 	return response;
 }
-
-//this function parses the motorpool json obj into a map obj, with the ID being the name,
-//and the other informations inside a list being the value
-/*
-function parseMotorpool(json) {
-	if (json != null) {
-		out = new Map();
-
-		for (let i = 0; i < json.length; i++) {
-			out.set(json[i].id, [
-			]);
-		}
-		return out;
-	} else {
-		console.log("parseMotorpool: input was null for some reason");
-	}
-}
-*/
 
 /* 
 this function is dedicated to creating a button DOM in the html
@@ -292,12 +272,13 @@ function parseInputs() {
 	// this loop iterates through the inputs in the html page.
 	for (let i = 0; i < inputs.length; i++) {
 		let input = inputs[i];
-		console.log(input.value, input.id); // inputs[i].id gets the ID
-		if (input.value != "<empty string>") {
-			// check if there is a value.
-			inputData = motorpoolMap.get(input.id); // get motorpool data for the id, do stuff
-			console.log(inputData);
+		
+		// check if a vehicle has been added to the checklist
+		if (input.value != "") {
+			console.log(input.value, input.id);
+			motorpoolMap.get(input.id);
 		}
+		
 	}
 	console.log("done parsing inputs");
 }
@@ -312,3 +293,6 @@ const motorpoolPath = "../json/motorpool.json";
 
 parse(factionsPath, motorpoolPath);
 console.log(motorpoolMap.get("Car"));
+console.log(typeof 1);
+
+const input = document.querySelector("input");
