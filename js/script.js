@@ -268,7 +268,11 @@ async function generateContent(variant) {
 		const vehicles = vehicleGroup.vehicles;
 		fillData(vehicles);
 	}
+	parseInputs();
+	console.log("DONE LOADING CONTENT");
 }
+
+//----------TESTING-FUNCTIONS----------//
 
 function generateInputs(id, parent) {
 	let newInput = document.createElement("input");
@@ -280,6 +284,24 @@ function generateInputs(id, parent) {
 	const parentNode = parent;
 	parentNode.insertAdjacentElement("beforeend", newInput);
 }
+
+// get all input DOMs and chec
+function parseInputs() {
+	const inputs = document.querySelectorAll("input");
+
+	// this loop iterates through the inputs in the html page.
+	for (let i = 0; i < inputs.length; i++) {
+		let input = inputs[i];
+		console.log(input.value, input.id); // inputs[i].id gets the ID
+		if (input.value != "<empty string>") {
+			// check if there is a value.
+			inputData = motorpoolMap.get(input.id); // get motorpool data for the id, do stuff
+			console.log(inputData);
+		}
+	}
+	console.log("done parsing inputs");
+}
+//------------------------------------//
 
 //----------VARIABLES----------//
 const factionsPath = "../json/factions.json";
