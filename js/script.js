@@ -248,8 +248,6 @@ async function generateContent(variant) {
 		const vehicles = vehicleGroup.vehicles;
 		fillData(vehicles);
 	}
-	parseInputs();
-	console.log("DONE LOADING CONTENT");
 }
 
 //----------TESTING-FUNCTIONS----------//
@@ -268,19 +266,33 @@ function generateInputs(id, parent) {
 // get all input DOMs and chec
 function parseInputs() {
 	const inputs = document.querySelectorAll("input");
+	const resultDOM = document.getElementById("resultData");
 
 	// this loop iterates through the inputs in the html page.
 	for (let i = 0; i < inputs.length; i++) {
 		let input = inputs[i];
-		
+
 		// check if a vehicle has been added to the checklist
-		if (input.value != "") {
-			console.log(input.value, input.id);
-			motorpoolMap.get(input.id);
+		if (input.value != "" && input.value > 0) {
+			let inputData = motorpoolMap.get(input.id);
+			console.log(inputData[1]);
+			inputCounter.passengers += Number(inputData[3]);
+			inputCounter.crew += Number(inputData[2]);
+			if (inputData.cargo != -1) {
+				inputCounter.cargo += Number(inputData[4]);
+			}d
 		}
-		
 	}
-	console.log("done parsing inputs");
+
+	let string =
+		"Current Preset requires " +
+		inputCounter.crew +
+		" crew. <br/> It provides space for " +
+		inputCounter.passengers +
+		" passengers, as well as " +
+		inputCounter.cargo +
+		" cargo slots.";
+	resultDOM.innerHTML = string;
 }
 //------------------------------------//
 
