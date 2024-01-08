@@ -1,0 +1,137 @@
+/*
+ * Variables
+ */
+
+ :root {
+    /* PXG palette colours */
+
+    /* "Jet" */
+    --clr-pxg-dark: #2d2c2d;
+    /* "Cinnabar" */
+    --clr-pxg-red: #f1372a;
+    /* "Yellow Orange Color Wheel */
+    --clr-pxg-orange: #f8951d;
+    /* "Cultured" */
+    --clr-pxg-light: #eaebee;
+    /* "Rich Black FOGRA 39" */
+    --clr-pxg-black: #0a0a0a;
+
+    /* Font colours */
+    --clr-font-dark: var(--clr-pxg-dark);
+    --clr-font-light: var(--clr-pxg-light);
+
+    /* Background colours */
+    --clr-bg-dark: var(--clr-pxg-dark);
+    --clr-bg-medium: #4d4c4c;
+    --clr-bg-light: var(--clr-pxg-light);
+
+    /* Link colours */
+    --clr-link:         var(--clr-pxg-orange);
+    --clr-link-hover:   var(--clr-pxg-red);
+    --clr-link-visited: purple;
+
+    /* Dimensions */
+    --dim-min-content-border: 20px;
+}
+
+/*
+ * General
+ */
+
+html {
+    background-color: var(--clr-bg-dark);
+}
+
+body {
+    width: 800px;
+    max-width: calc(100vw - 2*var(--dim-min-content-border));
+    margin: 0 auto;
+}
+
+/*
+ * Typography
+ */
+
+html {
+    font-size: 18px;
+    color: var(--clr-font-light);
+    font-family: sans-serif;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 2.0rem 0 0.9rem;
+    line-height: 1.24em;
+}
+
+h1 { font-size: 2.441rem; }
+h2 { font-size: 1.953rem; }
+h3 { font-size: 1.563rem; }
+h4 { font-size: 1.25rem;  }
+h5 { font-size: 1rem;     }
+
+p, li, td {
+    line-height: 1.5em;
+}
+
+p {
+    margin: 10px 0 10px 0;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--clr-link);
+    transition: color 160ms;
+}
+a:hover {
+    color: red;
+    color: var(--clr-link-hover);
+}
+a:visited {
+    color: var(--clr-link-visited);
+}
+
+/*
+ * Page layout
+ */
+
+#buttonContainer {
+    margin-top: 2em;
+}
+
+#buttonContainer > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#buttonContainer button {
+    display: block;
+}
+
+#buttonContainer #sides {
+}
+
+/* More specific selector, rather than just "#sides", is necessary to
+ * override the general rules under "#buttonContainer > div" */
+#buttonContainer #factions {
+    flex-direction: column;
+    max-width: 12em;
+}
+
+#buttonContainer #variants {
+}
+
+/*
+ * Buttons
+ */
+
+button {
+    padding: 0.2em 0.5em;
+    margin: 0.1em 0.2em;
+}

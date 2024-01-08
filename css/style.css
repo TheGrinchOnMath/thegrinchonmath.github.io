@@ -1,0 +1,69 @@
+button {
+	background-color: darkgrey;
+	border: none;
+}
+
+body {
+	background-color: darkslategrey;
+	color: darkslategrey;
+}
+
+#sides {
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+
+	color: "green";
+}
+#factions {
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
+
+	padding: 10px;
+
+	color: "red";
+}
+#variants {
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: column;
+
+	color: "blue";
+	padding: 10px;
+}
+#buttonContainer {
+	/*setup the flexbox to be vertical*/
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+}
+p {
+	color: black;
+	background-color: rgb(89, 91, 91);
+}
+#vehicleContainer {
+	display: flex;
+	flex-direction: row;
+	background-color: darkgrey;
+    margin-bottom: 10px;
+}
+
+img {
+    padding: 10px;
+	border: 2px;
+	border-color: black;
+	border-radius: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	font: arial;
+	margin: 5px;
+}
+
+input {
+	padding: 20px;
+	margin: 30px;
+}
