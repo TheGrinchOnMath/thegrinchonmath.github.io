@@ -294,14 +294,11 @@ function parseInputs() {
 
 		if (group == "Rotary Transport") {
 			airCounter.rotaryTransport += 1;
-		}
-		else if (group == "Rotary Attack") {
+		} else if (group == "Rotary Attack") {
 			airCounter.rotaryAttack += 1;
-		}
-		else if (group == "Fixed Wing Transport") {
+		} else if (group == "Fixed Wing Transport") {
 			airCounter.fixedWingTransport += 1;
-		}
-		else if (group == "Fixed Wing Attack") {
+		} else if (group == "Fixed Wing Attack") {
 			airCounter.fixedWingAttack += 1;
 		}
 
@@ -311,12 +308,12 @@ function parseInputs() {
 			let inputData = motorpoolMap.get(input.id);
 
 			// add values from the map to the global variable
-			inputCounter.passengers += Number(inputData[3]);
-			inputCounter.crew += Number(inputData[2]);
+			inputCounter.passengers += Number(inputData[3]) * Number(input.value);
+			inputCounter.crew += Number(inputData[2])* Number(input.value);
 
 			// if cargo is supposed to be non-empty (-1 is equal to no cargo)
 			if (inputData.cargo != -1) {
-				inputCounter.cargo += Number(inputData[4]);
+				inputCounter.cargo += Number(inputData[4])* Number(input.value);
 			}
 		}
 	}

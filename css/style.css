@@ -1,18 +1,21 @@
 button {
-	background-color: darkgrey;
-	border: none;
+	background-color: lightgrey;
+	border-radius: 2px;
+	border-color: lightgrey;
+	border-style: solid;
+	margin-bottom: 5px;
 }
 
 body {
-	background-color: darkslategrey;
-	color: darkslategrey;
+	background-color: rgb(138, 138, 138);
+	color: rgb(138, 138, 138);
 }
 
 #sides {
 	/*setup the flexbox to be vertical*/
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
+	padding: 5px;
 
 	color: "green";
 }
@@ -21,7 +24,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	padding: 10px;
+	padding: 5px;
 
 	color: "red";
 }
@@ -31,48 +34,76 @@ body {
 	flex-direction: column;
 
 	color: "blue";
-	padding: 10px;
+	padding: 5px;
 }
 #buttonContainer {
 	/*setup the flexbox to be vertical*/
 	display: flex;
 	flex-direction: row;
-	padding: 10px;
+	justify-content: left;
 }
+
 p {
 	color: black;
-	background-color: rgb(89, 91, 91);
-	align-content: center;
-	height: fit-content;
+	background-color: lightgrey;
+	align-content: auto;
+	height: 20px;
+	padding: 5px;
+	text-anchor: start;
+	border-radius: 2px;
 }
+
 #vehicleContainer {
 	display: flex;
 	flex-direction: row;
-	background-color: darkgrey;
-    margin-bottom: 10px;
-	margin-top: 60px;
+	background-color: rgb(100, 100, 100);
+	margin: 10px;
+	align-content: baseline;
+	width: fit-content;
+	justify-content: center;
 }
 
 img {
-    padding: 10px;
+	padding: 10px;
 	border: 2px;
 	border-color: black;
 	border-radius: 1px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: black;
 	font: arial;
-	margin: 5px;
 	align-content: center;
 }
 
-input {
-	padding: 20px;
-	margin: 30px;
-	height: auto;
+h3 {
+	font-size: 20px;
 }
 
-div {
-	align-content:center;
+input {
+	padding: 10px;
+	margin: 10px;
+	height: 20px;
+	width: 40px;
+}
+
+#calculate {
+	height: fit-content;
+	margin: 17.5px;
+	font-size: 20px;
+}
+
+#flexDiv {
+	display: flex;
+	flex-direction: row;
+}
+
+#results {
+	display: flex;
+	flex-direction: row;
 }
