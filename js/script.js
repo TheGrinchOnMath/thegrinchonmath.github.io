@@ -117,13 +117,11 @@ function randomImage(id, parent, position) {
 	parentDOM.insertAdjacentElement(position, imageDOM);
 }
 
-function fillData(vehicles) {
+function fillData(vehicles, group) {
 	const contentDiv = document.getElementById("content");
+	console.log(group); // get all possible group text for later use
 
 	for (let j = 0; j < vehicles.length; j++) {
-		//console.log(vehicles[j].id, vehicles[j].cargo);
-		//console.log(motorpoolMap.get(vehicles[j].id));
-
 		const data = motorpoolMap.get(vehicles[j].id);
 		// avoid errors cropping up when data is undefined
 		if (data == undefined) {
@@ -135,14 +133,16 @@ function fillData(vehicles) {
 			const string =
 				"Name: " +
 				data[0] +
-				"\tType: " +
+				"   Type: " +
 				data[1] +
-				"<br/>Crew: " +
+				"   Crew: " +
 				data[2] +
-				"\tPassengers: " +
+				"   Passengers: " +
 				data[3] +
-				"<br/>cargo:" +
-				vehicles[j].cargo;
+				"   Cargo:" +
+				vehicles[j].cargo +
+				"   Group:" +
+				group;
 			if (data[4].length > 0) {
 				string.concat("<br/>", data[4]);
 			}
@@ -150,7 +150,7 @@ function fillData(vehicles) {
 			let vehicleDiv = document.createElement("div");
 			vehicleDiv.setAttribute("id", "vehicleContainer");
 			contentDiv.insertAdjacentElement("beforeend", vehicleDiv);
-
+			vehicleDiv.setAttribute("value", group);
 			// create vehicleData p, add string created earlier
 			let vehicleData = document.createElement("p");
 			vehicleData.innerHTML = string;
@@ -246,61 +246,96 @@ async function generateContent(variant) {
 
 		// start iterating through the vehicles
 		const vehicles = vehicleGroup.vehicles;
-		fillData(vehicles);
+		fillData(vehicles, vehicleGroup.group);
 	}
 }
 
-//----------TESTING-FUNCTIONS----------//
-
+// generate input node based upon id and parent node object
 function generateInputs(id, parent) {
+	// create new input DOM
 	let newInput = document.createElement("input");
+
+	// set input attributes, not yet modular
 	newInput.setAttribute("type", "number");
 	newInput.setAttribute("max", "10");
 	newInput.setAttribute("min", "0");
 	newInput.setAttribute("id", id);
 	newInput.setAttribute("default", "0");
+
+	// get parentNode from func params, insert input inside the parent node
 	const parentNode = parent;
 	parentNode.insertAdjacentElement("beforeend", newInput);
 }
 
 // get all input DOMs and chec
 function parseInputs() {
+	// reinitialize inputCounter to avoid adding new values to old  values
+	inputCounter = { passengers: 0, crew: 0, cargo: 0, turrets: [] };
+
+	// get all input nodes and the header node for the results
 	const inputs = document.querySelectorAll("input");
 	const resultDOM = document.getElementById("resultData");
 
-	// this loop iterates through the inputs in the html page.
+	// create object to keep count of number of air assets
+	let airCounter = {
+		rotaryTransport: 0,
+		rotaryAttack: 0,
+		fixedWingTransport: 0,
+		fixedWingAttack: 0,
+	};
+
+	// this loop iterates through the input nodes in the html page.
 	for (let i = 0; i < inputs.length; i++) {
 		let input = inputs[i];
 
-		// check if a vehicle has been added to the checklist
+		// get parent node and retrieve previously set value corresponding to group
+		const parentNode = input.parentNode;
+		const group = parentNode.value;
+
+		if (group == "Rotary Transport") {
+			airCounter.rotaryTransport += 1;
+		} else if (group == "Rotary Attack") {
+			airCounter.rotaryAttack += 1;
+		} else if (group == "Fixed Wing Transport") {
+			airCounter.fixedWingTransport += 1;
+		} else if (group == "Fixed Wing Attack") {
+			airCounter.fixedWingAttack += 1;
+		}
+
+		// check if a vehicle has been added to the checklist, aka if its counter is above zero
 		if (input.value != "" && input.value > 0) {
+			// transfer the data from the motorpool into a variable
 			let inputData = motorpoolMap.get(input.id);
-			console.log(inputData[1]);
-			inputCounter.passengers += Number(inputData[3]);
-			inputCounter.crew += Number(inputData[2]);
+
+			// add values from the map to the global variable
+			inputCounter.passengers += Number(inputData[3]) * Number(input.value);
+			inputCounter.crew += Number(inputData[2])* Number(input.value);
+
+			// if cargo is supposed to be non-empty (-1 is equal to no cargo)
 			if (inputData.cargo != -1) {
-				inputCounter.cargo += Number(inputData[4]);
+				inputCounter.cargo += Number(inputData[4])* Number(input.value);
 			}
 		}
 	}
 
+	// build HTML string for output
 	let string =
 		"Current Preset requires " +
 		inputCounter.crew +
-		" crew. <br/> It provides space for " +
+		" crew. It provides space for " +
 		inputCounter.passengers +
 		" passengers, as well as " +
 		inputCounter.cargo +
 		" cargo slots.";
 	resultDOM.innerHTML = string;
 }
-//------------------------------------//
 
 //----------VARIABLES----------//
 const factionsPath = "../json/factions.json";
 const motorpoolPath = "../json/motorpool.json";
 //-----------------------------//
 
-//------------TESTING BELOW HERE FOR READABILITY--------------//
-
+//----------CALL MAIN FUNCTION----------//
 parse(factionsPath, motorpoolPath);
+
+//------------TESTING BELOW HERE FOR READABILITY--------------//
