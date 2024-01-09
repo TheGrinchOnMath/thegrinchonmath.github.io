@@ -42,12 +42,15 @@ body {
 p {
 	color: black;
 	background-color: rgb(89, 91, 91);
+	align-content: center;
+	height: fit-content;
 }
 #vehicleContainer {
 	display: flex;
 	flex-direction: row;
 	background-color: darkgrey;
     margin-bottom: 10px;
+	margin-top: 60px;
 }
 
 img {
@@ -61,9 +64,15 @@ h1, h2, h3, h4, h5, h6 {
 	color: black;
 	font: arial;
 	margin: 5px;
+	align-content: center;
 }
 
 input {
 	padding: 20px;
 	margin: 30px;
+	height: auto;
+}
+
+div {
+	align-content:center;
 }
