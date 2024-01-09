@@ -105,6 +105,7 @@ function image(id, parent, position, url) {
 	parentDOM.insertAdjacentElement(position, imageDOM);
 }
 
+// random image from https://cataas.com/cat
 function randomImage(id, parent, position) {
 	// get the node of the parent, create image node
 	const parentDOM = document.getElementById(parent);
@@ -126,7 +127,6 @@ function fillData(vehicles, group) {
 		// avoid errors cropping up when data is undefined
 		if (data == undefined) {
 			console.log(data, vehicles[j].id, motorpoolMap.get(vehicles[j].id));
-			console.log(vehicles[13]);
 			console.log("data is undefined");
 		} else if (data != undefined) {
 			//construct string to display inside of vehicleData
@@ -154,6 +154,9 @@ function fillData(vehicles, group) {
 			// create vehicleData p, add string created earlier
 			let vehicleData = document.createElement("p");
 			vehicleData.innerHTML = string;
+
+			// convert vehicle ID to lowercase to search for a match with the images from the old motorpool tool
+			let lowercaseID = vehicles[j].id.toLowerCase();
 
 			// create image img, add src and alt attributes
 
