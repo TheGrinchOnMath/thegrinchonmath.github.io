@@ -81,6 +81,38 @@ function createButton(id, parent, position, func, params) {
 	}
 }
 
+// same as above, but with capabilities for custom text on the button
+function createButtonWithText(id, parent, position, func, params, innerText) {
+	// check if the button already exists
+	let buttonExists = !!document.getElementById(id);
+
+	// this if condition checks if some variables are given
+	if (
+		/*buttonExists &&*/
+		id != null &&
+		parent != null &&
+		func != null &&
+		params != null
+	) {
+		let parentDOM = document.getElementById(parent);
+
+		// create button and set attributes, add event listener (replaces onclick + its better)
+		let button = document.createElement("button");
+		button.setAttribute("id", id);
+		button.setAttribute("type", "button");
+		button.addEventListener("click", function () {
+			func(params);
+		});
+		button.innerText = innerText;
+
+		// add button inside the parent div
+		parentDOM.insertAdjacentElement(position, button);
+	} else {
+		console.log("ERROR: wrong input, aborting...");
+		return;
+	}
+}
+
 /* removes all children of a DOM element. Modified code from: https://stackoverflow.com/a/3955238
 calling node.children and iterating does not work, 
 but checking if the node has a child and then deleting the last child works really well
@@ -162,7 +194,7 @@ function fillData(vehicles, group) {
 			image.setAttribute("alt", " placeholder text");
 
 			// add image and vehicleDiv to vehicleData
-			vehicleDiv.insertAdjacentElement("afterbegin", image);
+			// vehicleDiv.insertAdjacentElement("afterbegin", image); remove image inside vehicleContent div, load image for highlighted
 			vehicleDiv.insertAdjacentElement("beforeend", vehicleData);
 			generateInputs(vehicles[j].id, vehicleDiv);
 		}
@@ -309,11 +341,11 @@ function parseInputs() {
 
 			// add values from the map to the global variable
 			inputCounter.passengers += Number(inputData[3]) * Number(input.value);
-			inputCounter.crew += Number(inputData[2])* Number(input.value);
+			inputCounter.crew += Number(inputData[2]) * Number(input.value);
 
 			// if cargo is supposed to be non-empty (-1 is equal to no cargo)
 			if (inputData.cargo != -1) {
-				inputCounter.cargo += Number(inputData[4])* Number(input.value);
+				inputCounter.cargo += Number(inputData[4]) * Number(input.value);
 			}
 		}
 	}
@@ -328,6 +360,21 @@ function parseInputs() {
 		inputCounter.cargo +
 		" cargo slots.";
 	resultDOM.innerHTML = string;
+}
+
+//
+function generateInputsNew(id, parent) {
+	const idPlus = id + "Plus",
+		idMinus = id + "Minus";
+
+	const inputDiv = document.createElement("div");
+	inputDiv.setAttribute("id", "vehicleInput");
+	parent.set
+
+	createButtonWithText(idPlus, inputDiv, "beforeend", parseInputs, null, "+");
+	createButtonWithText(idMinus, inputDiv, "beforeend", parseInputs, null, "-");
+
+	let buttonPlus = document.getElementById(idPlus), buttonMinus = document
 }
 
 //----------VARIABLES----------//
