@@ -107,3 +107,7 @@ input {
 	display: flex;
 	flex-direction: row;
 }
+
+/* grid layout:
+8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter
+1 row per vehicle
