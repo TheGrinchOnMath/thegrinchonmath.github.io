@@ -177,7 +177,7 @@ function variants(faction) {
 	}
 
 	// replace buttons in variants, empty content
-    for (let i = 0; i < newVariantsArray.length; i++) {
+	for (let i = 0; i < newVariantsArray.length; i++) {
 		variants.insertAdjacentElement("beforeend", newVariantsArray[i]);
 	}
 	content.replaceChildren([]);
@@ -195,13 +195,13 @@ function generateContent(variant) {
 
 		// set group header attributes
 		setAttributes(groupTitle, {
-			innerText: group.group,
 			id: group.group,
 			class: "group",
 		});
+        groupTitle.innerText = group.group;
 
 		// insert group into content
-		contentNode.insertAdjacentElement("beforend", groupTitle);
+		contentNode.insertAdjacentElement("beforeend", groupTitle);
 
 		// get vehicles from group, process vehicles
 		const vehicles = group.vehicles;
@@ -242,8 +242,8 @@ function processVehicles(vehicles, group) {
 			const type = createTextNode({
 				id: typeId,
 				class: "type",
-				innerText: data[1],
 			});
+			type.innerText = data[1];
 			contentNode.insertAdjacentElement("beforeend", type);
 
 			// create name node, set attributes
@@ -251,8 +251,8 @@ function processVehicles(vehicles, group) {
 			const name = createTextNode({
 				id: nameId,
 				class: "name",
-				innerText: data[0],
 			});
+			name.innerText = data[0];
 			contentNode.insertAdjacentElement("beforeend", name);
 
 			// create crew node, set attributes
@@ -260,8 +260,8 @@ function processVehicles(vehicles, group) {
 			const crew = createTextNode({
 				id: crewId,
 				class: "crew",
-				innerText: data[2],
 			});
+			crew.innerText = data[2];
 			contentNode.insertAdjacentElement("beforeend", crew);
 
 			// create passenger node, set attributes
@@ -269,8 +269,8 @@ function processVehicles(vehicles, group) {
 			const passengers = createTextNode({
 				id: passengersId,
 				class: "passengers",
-				innerText: data[3],
 			});
+			passengers.innerText = data[3];
 			contentNode.insertAdjacentElement("beforeend", passengers);
 
 			// create cargo node, set attributes
@@ -278,24 +278,26 @@ function processVehicles(vehicles, group) {
 			const cargo = createTextNode({
 				id: cargoId,
 				class: "cargo",
-				innerText: data[5],
 			});
+			cargo.innerText = data[5];
 			contentNode.insertAdjacentElement("beforeend", cargo);
 
 			// create plus button, set attributes
 			const plusId = vehicles[i].id + "Plus";
 			const plus = createButton(
 				{ id: plusId, type: "button" },
-				{ calculate: undefined, addToVehicleCount: id }
+				{ calculate: "", addToVehicleCount: vehicles[i].id }
 			);
+			plus.innerText = "+";
 			contentNode.insertAdjacentElement("beforeend", plus);
 
 			// create minus button, set attributes
 			const minusId = vehicles[i].id + "Minus";
 			const minus = createButton(
 				{ id: minusId, type: "button" },
-				{ calculate: undefined, deductFromVehicleCount: id }
+				{ calculate: "", deductFromVehicleCount: vehicles[i].id }
 			);
+			minus.innerText = "-";
 			contentNode.insertAdjacentElement("beforeend", minus);
 
 			// create vehicleCount node, set attributes
@@ -303,8 +305,8 @@ function processVehicles(vehicles, group) {
 			const vehicleCount = createTextNode({
 				id: vehicleCountId,
 				class: "vehicleCount",
-				innerText: "0",
 			});
+			vehicleCount.innerText = "0";
 			contentNode.insertAdjacentElement("beforeend", vehicleCount);
 		}
 	}
@@ -376,5 +378,8 @@ function checkVehicleCount(vehicleId) {
 	}
 }
 
+function calculate(str) {
+	console.log("hello world!");
+}
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
