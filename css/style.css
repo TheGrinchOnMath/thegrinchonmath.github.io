@@ -1,6 +1,5 @@
 button {
 	background-color: lightgrey;
-	border-radius: 2px;
 	border-color: lightgrey;
 	border-style: solid;
 	margin-bottom: 5px;
@@ -17,7 +16,6 @@ body {
 	flex-direction: column;
 	padding: 5px;
 
-	color: "green";
 }
 #factions {
 	/*setup the flexbox to be vertical*/
@@ -25,16 +23,13 @@ body {
 	flex-direction: column;
 
 	padding: 5px;
-
-	color: "red";
 }
 #variants {
 	/*setup the flexbox to be vertical*/
 	display: flex;
 	flex-direction: column;
-
-	color: "blue";
 	padding: 5px;
+	color: "blue";
 }
 #buttonContainer {
 	/*setup the flexbox to be vertical*/
@@ -47,27 +42,6 @@ p {
 	color: black;
 	background-color: lightgrey;
 	align-content: auto;
-	height: 20px;
-	padding: 5px;
-	text-anchor: start;
-	border-radius: 2px;
-}
-
-#vehicleContainer {
-	display: flex;
-	flex-direction: row;
-	background-color: rgb(100, 100, 100);
-	margin: 10px;
-	align-content: baseline;
-	width: fit-content;
-	justify-content: center;
-}
-
-img {
-	padding: 10px;
-	border: 2px;
-	border-color: black;
-	border-radius: 1px;
 }
 
 h1,
@@ -81,33 +55,53 @@ h6 {
 	align-content: center;
 }
 
-h3 {
-	font-size: 20px;
-}
-
-input {
-	padding: 10px;
-	margin: 10px;
-	height: 20px;
-	width: 40px;
-}
-
 #calculate {
 	height: fit-content;
 	margin: 17.5px;
 	font-size: 20px;
 }
 
-#flexDiv {
-	display: flex;
-	flex-direction: row;
+.plus, .minus {
+	height: auto;
+	width:auto;
 }
 
-#results {
-	display: flex;
-	flex-direction: row;
+#content {
+	display: grid;
+	grid-template-columns: repeat(8 fr);
 }
+
+.group {
+	grid-column-start:1;
+	grid-column-end: 8;
+}
+/*
+.type {
+	grid-column-start: 2;
+	grid-column-end: 2;
+}
+.name {
+	grid-column-start: 1;
+	grid-column-end: 1;
+}
+.crew {
+	grid-column-start: 3;
+	grid-column-end: 3;
+}
+.passengers{
+	grid-column-start: 4;
+	grid-column-end: 4;
+}
+.cargo {
+	grid-column-start: 5;
+	grid-column-end: 5;	
+}
+.plus {
+	grid-column-start: 6;
+	grid-column-end: 6;
+}*/
 
 /* grid layout:
 8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter
 1 row per vehicle
+*/

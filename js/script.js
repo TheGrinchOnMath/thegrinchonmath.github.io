@@ -103,7 +103,6 @@ function initSides(sideArray) {
 
 	for (let i = 0; i < sideArray.length; i++) {
 		let side = sideArray[i];
-		console.log(side);
 		const button = createButton(
 			{ id: side, type: "button" },
 			{ factions: side }
@@ -198,7 +197,7 @@ function generateContent(variant) {
 			id: group.group,
 			class: "group",
 		});
-        groupTitle.innerText = group.group;
+		groupTitle.innerText = group.group;
 
 		// insert group into content
 		contentNode.insertAdjacentElement("beforeend", groupTitle);
@@ -279,13 +278,14 @@ function processVehicles(vehicles, group) {
 				id: cargoId,
 				class: "cargo",
 			});
+            
 			cargo.innerText = data[5];
 			contentNode.insertAdjacentElement("beforeend", cargo);
 
 			// create plus button, set attributes
 			const plusId = vehicles[i].id + "Plus";
 			const plus = createButton(
-				{ id: plusId, type: "button" },
+				{ id: plusId, type: "button", class: "plus" },
 				{ calculate: "", addToVehicleCount: vehicles[i].id }
 			);
 			plus.innerText = "+";
@@ -294,7 +294,7 @@ function processVehicles(vehicles, group) {
 			// create minus button, set attributes
 			const minusId = vehicles[i].id + "Minus";
 			const minus = createButton(
-				{ id: minusId, type: "button" },
+				{ id: minusId, type: "button", class: "minus" },
 				{ calculate: "", deductFromVehicleCount: vehicles[i].id }
 			);
 			minus.innerText = "-";
