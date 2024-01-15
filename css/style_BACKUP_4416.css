@@ -74,12 +74,22 @@ h6 {
 
 #content {
 	display: grid;
+<<<<<<< HEAD
 	grid-template-columns:  fr fr fr fr fr fr fr ;
 }
 
 .group {
 	grid-column-start:1;
 	grid-column-end: 9;
+=======
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.group {
+	grid-column-start: 1;
+	grid-column-end: 9;
+	height: var(--var-grid-height);
+>>>>>>> 518de80dd1542f3238f547036f9581e6d0e79b3b
 }
 
 .type {
