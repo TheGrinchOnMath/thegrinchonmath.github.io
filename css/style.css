@@ -1,3 +1,9 @@
+
+:root{
+	--var-grid-height: 30px;
+}
+
+
 button {
 	background-color: lightgrey;
 	border-color: lightgrey;
@@ -15,7 +21,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 5px;
-
 }
 #factions {
 	/*setup the flexbox to be vertical*/
@@ -61,45 +66,39 @@ h6 {
 	font-size: 20px;
 }
 
-.plus, .minus {
-	height: auto;
-	width:auto;
+.plus,
+.minus {
+	height: var(--var-grid-height);
+	width: auto;
 }
 
 #content {
 	display: grid;
-	grid-template-columns: repeat(8 fr);
+	grid-template-columns: repeat(8, 1fr);
 }
 
 .group {
-	grid-column-start:1;
-	grid-column-end: 8;
+	grid-column-start: 1;
+	grid-column-end: 9;
+	height: var(--var-grid-height);
 }
-/*
+
 .type {
-	grid-column-start: 2;
-	grid-column-end: 2;
+	height: var(--var-grid-height);
 }
 .name {
-	grid-column-start: 1;
-	grid-column-end: 1;
+	height: var(--var-grid-height);
 }
 .crew {
-	grid-column-start: 3;
-	grid-column-end: 3;
+	height: var(--var-grid-height);
 }
 .passengers{
-	grid-column-start: 4;
-	grid-column-end: 4;
+	height: var(--var-grid-height);
 }
 .cargo {
-	grid-column-start: 5;
-	grid-column-end: 5;	
+	height: var(--var-grid-height);
 }
-.plus {
-	grid-column-start: 6;
-	grid-column-end: 6;
-}*/
+
 
 /* grid layout:
 8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter

@@ -89,6 +89,13 @@ function createButton(attributes = "undefined", functions = "undefined") {
 	return button;
 }
 
+function removeChildren(id) {
+	const node = document.getElementById(id);
+	while (node.firstChild) {
+		node.removeChild(node.lastChild);
+	}
+}
+
 // get image from path, load image to given location in html
 function loadImage(id, parent, position = "beforeend", path) {}
 
@@ -146,6 +153,7 @@ function factions(side) {
 		newFactionsArray.push(button);
 	}
 
+	factions.replaceChildren([]);
 	// replace old factions with new factions, empty variants
 	for (let i = 0; i < newFactionsArray.length; i++) {
 		factions.insertAdjacentElement("beforeend", newFactionsArray[i]);
@@ -174,6 +182,7 @@ function variants(faction) {
 		button.innerText = str;
 		newVariantsArray.push(button);
 	}
+	variants.replaceChildren([]);
 
 	// replace buttons in variants, empty content
 	for (let i = 0; i < newVariantsArray.length; i++) {
@@ -187,6 +196,7 @@ function generateContent(variant) {
 	// get content node
 	const contentNode = document.getElementById("content");
 
+	// iterate through variant.motorpool array
 	for (let i = 0; i < variant.motorpool.length; i++) {
 		// create variable to store the data of the variant motorpool group, get the content node
 		const group = variant.motorpool[i],
@@ -278,7 +288,7 @@ function processVehicles(vehicles, group) {
 				id: cargoId,
 				class: "cargo",
 			});
-            
+
 			cargo.innerText = data[5];
 			contentNode.insertAdjacentElement("beforeend", cargo);
 
