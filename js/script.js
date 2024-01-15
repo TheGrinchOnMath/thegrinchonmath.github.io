@@ -322,6 +322,8 @@ function processVehicles(vehicles, group) {
 	}
 }
 
+// not working (below)
+
 // add to the counter of the given vehicle
 function addToVehicleCount(vehicleId) {
 	// check if the counter is ok
@@ -329,14 +331,14 @@ function addToVehicleCount(vehicleId) {
 
 	// get vehicle counter, extract count
 	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`);
-	let count = Number(vehicleCounter.textContent);
+	let count = Number(vehicleCounter.innerText);
 
 	// increment the counter by 1
 	count++;
 
 	// convert the count to string, reconvert it to a string and reinsert it into the node
-	countString = toString(count);
-	vehicleCounter.setAttribute("innerText", countString);
+	countString = count;
+	vehicleCounter.innerText = countString; // you can add numbers to innertext, will treat as string
 }
 
 // remove from the count of the given vehicle
@@ -346,14 +348,14 @@ function deductFromVehicleCount(vehicleId) {
 
 	// get vehicle counter, extract count
 	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`);
-	let count = Number(vehicleCounter.textContent);
+	let count = Number(vehicleCounter.innerText);
 
 	// increment the counter by 1
 	count--;
 
 	// convert the count to string, reconvert it to a string and reinsert it into the node
-	countString = toString(count);
-	vehicleCounter.setAttribute("innerText", countString);
+	countString = count;
+	vehicleCounter.innerText = countString;
 }
 
 //
@@ -364,7 +366,8 @@ function checkVehicleCount(vehicleId) {
 		minusButton = document.getElementById(`${vehicleId}Minus`);
 
 	// get count from vehicleCounter
-	let count = Number(vehicleCounter.textContent);
+	let count = Number(vehicleCounter.innerText);
+	console.log(typeof count, count);
 
 	if (count < 0) {
 		// set count to 0, disable the minus button and enable the plus button
@@ -372,16 +375,12 @@ function checkVehicleCount(vehicleId) {
 		console.log("how did that happen");
 		plusButton.setAttribute("disabled", "false");
 		minusButton.setAttribute("disabled", "true");
-	} else if (count == 0) {
-		// disable the minus button, enable the plus button when count is 0 so it doesnt go below
-		plusButton.setAttribute("disabled", "false");
-		minusButton.setAttribute("disabled", "true");
-	} else if (count >= maxVehicles) {
+	} else if (count > maxVehicles) {
 		// disable the plus button, enable the minus button, set count to 10
 		count = maxVehicles;
 		plusButton.setAttribute("disabled", "true");
 		minusButton.setAttribute("disabled", "false");
-	} else {
+	} else if (0 > count > maxVehicles) {
 		// enable plus and minus button
 		plusButton.setAttribute("disabled", "false");
 		minusButton.setAttribute("disabled", "false");

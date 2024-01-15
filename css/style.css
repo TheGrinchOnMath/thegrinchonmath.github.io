@@ -46,7 +46,6 @@ body {
 p {
 	color: black;
 	background-color: lightgrey;
-	align-content: auto;
 }
 
 h1,
@@ -68,8 +67,7 @@ h6 {
 
 .plus,
 .minus {
-	height: var(--var-grid-height);
-	width: auto;
+	height: inherit;
 }
 
 #content {
@@ -83,19 +81,19 @@ h6 {
 }
 
 .type {
-	height: var(--var-grid-height);
+	height:	inherit;
 }
 .name {
-	height: var(--var-grid-height);
+	height: inherit;
 }
 .crew {
-	height: var(--var-grid-height);
+	height: inherit;
 }
 .passengers{
-	height: var(--var-grid-height);
+	height: inherit;
 }
 .cargo {
-	height: var(--var-grid-height);
+	height: inherit;
 }
 
 
@@ -103,3 +101,8 @@ h6 {
 8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter
 1 row per vehicle
 */
+
+
+#content {
+	height: 30px;
+}
