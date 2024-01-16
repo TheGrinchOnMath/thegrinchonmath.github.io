@@ -97,7 +97,9 @@ function removeChildren(id) {
 }
 
 // get image from path, load image to given location in html
-function loadImage(id, parent, position = "beforeend", path) {}
+function loadImage(id) {
+	console.log(id);
+}
 
 function initSides(sideArray) {
 	// get nodes for sides, factions, variants
@@ -193,7 +195,7 @@ function variants(faction) {
 }
 
 // variant parameter is an object, extracted from factions.json
-function generateContent(variant) {
+async function generateContent(variant) {
 	// get content node
 	const contentNode = document.getElementById("content");
 
@@ -254,6 +256,7 @@ function processVehicles(vehicles, group) {
 				class: "type",
 			});
 			type.innerText = data[1];
+			type.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", type);
 
 			// create name node, set attributes
@@ -263,6 +266,7 @@ function processVehicles(vehicles, group) {
 				class: "name",
 			});
 			name.innerText = data[0];
+			name.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", name);
 
 			// create crew node, set attributes
@@ -272,6 +276,7 @@ function processVehicles(vehicles, group) {
 				class: "crew",
 			});
 			crew.innerText = data[2];
+			crew.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", crew);
 
 			// create passenger node, set attributes
@@ -280,6 +285,7 @@ function processVehicles(vehicles, group) {
 				id: passengersId,
 				class: "passengers",
 			});
+			passengers.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			passengers.innerText = data[3];
 			contentNode.insertAdjacentElement("beforeend", passengers);
 
@@ -291,6 +297,7 @@ function processVehicles(vehicles, group) {
 			});
 
 			cargo.innerText = data[5];
+			cargo.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", cargo);
 
 			// create plus button, set attributes
@@ -300,6 +307,7 @@ function processVehicles(vehicles, group) {
 				{ calculate: "", addToVehicleCount: vehicles[i].id }
 			);
 			plus.innerText = "+";
+			plus.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", plus);
 
 			// create minus button, set attributes
@@ -318,6 +326,7 @@ function processVehicles(vehicles, group) {
 				class: "vehicleCount",
 			});
 			vehicleCount.innerText = "0";
+			vehicleCount.addEventListener("click", function () {loadImage(vehicles[i].id)});
 			contentNode.insertAdjacentElement("beforeend", vehicleCount);
 		}
 	}
@@ -388,22 +397,32 @@ function checkVehicleCount(vehicleId) {
 }
 
 function showSelectedVehicles() {
+	// get all text nodes containing the numerical values for the vehicle quantity
 	const counterNodes = document.getElementsByClassName("vehicleCounter");
-	for (let node in counterNodes) {
-		console.log(node);
+	for (let i = 0; i < counterNodes.length; i++) {
+		console.log(node, typeof node, counterNodes[i], typeof counterNodes[i]);
 	}
 }
 
 function calculate(str) {
-	console.log("hello world!");
+	this
 }
 
 function addEventListenersToPNodes() {
-	const pNodes = document.getElementsByTagName("p");
-	for (let p in pNodes) {
-		console.log(p);
-		p.addEventListener("click", function () {
-			showSelectedVehicles;
+	const contentNode = document.getElementById("content");
+	const pNodes = contentNode.getElementsByTagName("p"); // list of p elements inside of div id:content
+
+	// iterate through that list
+	for (let i = 0; 0 < pNodes.length; i++) {
+		// avoid spaghetti
+		let paragraph = pNodes[i];
+		if (paragraph == undefined) {
+			console.log(i, pNodes[i], pNodes[i-1].id, pNodes[i-1].innerText)
+		}
+		// add the event listener for click, that calls the function showSelectedVehicles
+		paragraph.addEventListener("click", function () {
+			// call showSelectedVehicles()
+			showSelectedVehicles();
 		});
 	}
 }
@@ -411,9 +430,28 @@ function addEventListenersToPNodes() {
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
 
-
+// speshal button to test the addEventListenersToPNodes()function
 const speshalButton = document.createElement("button");
 speshalButton.innerText = "add event listeners to all p elements!";
 const resultsDiv = document.getElementById("results");
-speshalButton.addEventListener("click", function () {addEventListenersToPNodes();});
-resultsDiv.insertAdjacentElement("afterbegin", speshalButton)
+speshalButton.addEventListener("click", function () {
+	addEventListenersToPNodes();
+});
+resultsDiv.insertAdjacentElement("afterbegin", speshalButton);
+
+IdIterator = motorpoolMap.keys()
+
+for (let len = 0; len < motorpoolMap.length; len++) {
+	let id = IdIterator.next().value();
+	let url = `/img/${id}.jpg`
+}
+
+// credit: https://stackoverflow.com/a/3646923 this function sends a request. 
+// if there is something there, a status other than 404 will be returned, which is what we want to know
+function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
