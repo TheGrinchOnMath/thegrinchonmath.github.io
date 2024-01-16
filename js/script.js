@@ -182,6 +182,7 @@ function variants(faction) {
 		button.innerText = str;
 		newVariantsArray.push(button);
 	}
+	// empty variants div
 	variants.replaceChildren([]);
 
 	// replace buttons in variants, empty content
@@ -367,7 +368,6 @@ function checkVehicleCount(vehicleId) {
 
 	// get count from vehicleCounter
 	let count = Number(vehicleCounter.innerText);
-	console.log(typeof count, count);
 
 	if (count < 0) {
 		// set count to 0, disable the minus button and enable the plus button
@@ -387,8 +387,33 @@ function checkVehicleCount(vehicleId) {
 	}
 }
 
+function showSelectedVehicles() {
+	const counterNodes = document.getElementsByClassName("vehicleCounter");
+	for (let node in counterNodes) {
+		console.log(node);
+	}
+}
+
 function calculate(str) {
 	console.log("hello world!");
 }
+
+function addEventListenersToPNodes() {
+	const pNodes = document.getElementsByTagName("p");
+	for (let p in pNodes) {
+		console.log(p);
+		p.addEventListener("click", function () {
+			showSelectedVehicles;
+		});
+	}
+}
+
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
+
+
+const speshalButton = document.createElement("button");
+speshalButton.innerText = "add event listeners to all p elements!";
+const resultsDiv = document.getElementById("results");
+speshalButton.addEventListener("click", function () {addEventListenersToPNodes();});
+resultsDiv.insertAdjacentElement("afterbegin", speshalButton)
