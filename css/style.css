@@ -106,3 +106,7 @@ h6 {
 #content {
 	height: 30px;
 }
+
+#content p{
+	padding-right: 10px;
+}

@@ -10,8 +10,13 @@ let motorpoolMap = new Map(),
 let maxVehicles = 10,
 	minVehicles = 0;
 
-// keep track of how many inputs have
+// keep track of how many of each data type is at total
 let inputCounter = { passengers: 0, crew: 0, cargo: 0, turrets: [] };
+
+// arrays for use with checking if images are in the img directory
+let idArray = new Array();
+urlArray = new Array();
+notThereArray = new Array();
 
 // fetch json file, return js object. dont modify as promises are weird
 async function parseJson(path) {
@@ -98,7 +103,53 @@ function removeChildren(id) {
 
 // get image from path, load image to given location in html
 function loadImage(id) {
-	console.log(id);
+	// bring id to lowercase to search for a match in the images
+	const lowerCaseId = id.toLowerCase();
+
+	// create url for localhost
+	const imgUrl = `/img/${id}.jpg`;
+
+	// create img element
+	let img = document.createElement("img");
+	img.setAttribute("id", "image");
+
+	// set the caption
+	img.setAttribute("alt", id);
+
+	//--------set max width and height to small--------//
+
+	// declare variables
+	const width = img.width,
+		height = img.height;
+	let newWidth, newHeight;
+
+	// change size of image depending on below conditions
+	if (width > height) {
+		newWidth = 128;
+		newHeight = (width / newWidth) * height;
+	} else if (width < height) {
+		newHeight = 128;
+		newWidth = (height / newHeight) * width;
+	} else {
+		newWidth = newHeight = 128;
+	}
+
+	// resize image
+	img.width = newWidth;
+	img.height = newHeight;
+
+	// check if its inside the directory of images
+	if (asyncCheckFileExists(imgUrl)) {
+		// use the image from the img dir
+		img.setAttribute("src", imgUrl);
+	} else {
+		// use the missing img image
+		img.setAttribute("src", "/img/missing.jpg");
+	}
+
+	// add img to the results div at the end
+	const results = document.getElementById("results");
+	results.insertAdjacentElement("beforeend", img);
 }
 
 function initSides(sideArray) {
@@ -217,7 +268,7 @@ async function generateContent(variant) {
 
 		// get vehicles from group, process vehicles
 		const vehicles = group.vehicles;
-		processVehicles(vehicles, group.group);
+		processVehicles(vehicles);
 	}
 }
 
@@ -235,7 +286,7 @@ function createTextNode(attributes) {
 }
 
 // process vehicles of each group and insert into the content div at the right spot
-function processVehicles(vehicles, group) {
+function processVehicles(vehicles) {
 	// get content div
 	const contentNode = document.getElementById("content");
 
@@ -243,6 +294,8 @@ function processVehicles(vehicles, group) {
 	for (let i = 0; i < vehicles.length; i++) {
 		// set new variable from motorpoolMap for ease of syntax
 		const data = motorpoolMap.get(vehicles[i].id);
+
+		idArray.push(vehicles[i].id.toLowerCase());
 
 		if (data == undefined) {
 			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
@@ -256,7 +309,9 @@ function processVehicles(vehicles, group) {
 				class: "type",
 			});
 			type.innerText = data[1];
-			type.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			type.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", type);
 
 			// create name node, set attributes
@@ -266,7 +321,9 @@ function processVehicles(vehicles, group) {
 				class: "name",
 			});
 			name.innerText = data[0];
-			name.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			name.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", name);
 
 			// create crew node, set attributes
@@ -276,7 +333,9 @@ function processVehicles(vehicles, group) {
 				class: "crew",
 			});
 			crew.innerText = data[2];
-			crew.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			crew.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", crew);
 
 			// create passenger node, set attributes
@@ -285,7 +344,9 @@ function processVehicles(vehicles, group) {
 				id: passengersId,
 				class: "passengers",
 			});
-			passengers.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			passengers.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			passengers.innerText = data[3];
 			contentNode.insertAdjacentElement("beforeend", passengers);
 
@@ -296,9 +357,18 @@ function processVehicles(vehicles, group) {
 				class: "cargo",
 			});
 
-			cargo.innerText = data[5];
-			cargo.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			if (vehicles[i].cargo == -1) {
+				cargo.innerText = 0;
+			} else {
+				cargo.innerText = vehicles[i].cargo;
+			}
+
+			cargo.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", cargo);
+
+			// create turrets p, set attributes
 
 			// create plus button, set attributes
 			const plusId = vehicles[i].id + "Plus";
@@ -307,7 +377,9 @@ function processVehicles(vehicles, group) {
 				{ calculate: "", addToVehicleCount: vehicles[i].id }
 			);
 			plus.innerText = "+";
-			plus.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			plus.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", plus);
 
 			// create minus button, set attributes
@@ -326,7 +398,9 @@ function processVehicles(vehicles, group) {
 				class: "vehicleCount",
 			});
 			vehicleCount.innerText = "0";
-			vehicleCount.addEventListener("click", function () {loadImage(vehicles[i].id)});
+			vehicleCount.addEventListener("click", function () {
+				loadImage(vehicles[i].id);
+			});
 			contentNode.insertAdjacentElement("beforeend", vehicleCount);
 		}
 	}
@@ -405,7 +479,7 @@ function showSelectedVehicles() {
 }
 
 function calculate(str) {
-	this
+	this;
 }
 
 function addEventListenersToPNodes() {
@@ -417,7 +491,7 @@ function addEventListenersToPNodes() {
 		// avoid spaghetti
 		let paragraph = pNodes[i];
 		if (paragraph == undefined) {
-			console.log(i, pNodes[i], pNodes[i-1].id, pNodes[i-1].innerText)
+			console.log(i, pNodes[i], pNodes[i - 1].id, pNodes[i - 1].innerText);
 		}
 		// add the event listener for click, that calls the function showSelectedVehicles
 		paragraph.addEventListener("click", function () {
@@ -427,31 +501,42 @@ function addEventListenersToPNodes() {
 	}
 }
 
+// credit = https://stackoverflow.com/a/35341828
+
+function checkImagesArr(array) {
+	for (let index = 0; index < array.length; index++) {
+		const id = array[index].toLowerCase();
+		const url = `/img/${id}.jpg`;
+		if (asyncCheckFileExists(url)) {
+			urlArray.push(url);
+		} else {
+			notThereArray.push(url);
+		}
+	}
+}
+
+// check if the file exists by sending a xmlhttp request and reading the status. if 404, file not exist or service down
+// credit and inspiration: https://kinsta.com/knowledgebase/javascript-http-request/
+// !!! if the file does not exist the browser will throw an error. THIS IS NORMAL. the function will return false (normally?)
+async function asyncCheckFileExists(url) {
+	const xhr = new XMLHttpRequest();
+
+	// specify request type and destination
+	xhr.open("GET", url);
+
+	// send request
+	xhr.send();
+
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4) {
+			if (xhr.status != 404) {
+				return "sucess!";
+			} else {
+				return "Error, status was 404";
+			}
+		}
+	};
+}
+
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
-
-// speshal button to test the addEventListenersToPNodes()function
-const speshalButton = document.createElement("button");
-speshalButton.innerText = "add event listeners to all p elements!";
-const resultsDiv = document.getElementById("results");
-speshalButton.addEventListener("click", function () {
-	addEventListenersToPNodes();
-});
-resultsDiv.insertAdjacentElement("afterbegin", speshalButton);
-
-IdIterator = motorpoolMap.keys()
-
-for (let len = 0; len < motorpoolMap.length; len++) {
-	let id = IdIterator.next().value();
-	let url = `/img/${id}.jpg`
-}
-
-// credit: https://stackoverflow.com/a/3646923 this function sends a request. 
-// if there is something there, a status other than 404 will be returned, which is what we want to know
-function UrlExists(url)
-{
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status!=404;
-}
