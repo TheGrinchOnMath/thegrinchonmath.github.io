@@ -1,3 +1,19 @@
+/*
+NOTES FOR STRUCTURE (for chloris):
+the #buttonContainer div is a flexbox with row orientation.
+the #factions, #variants and #sides divs are flexboxes, with column orientation.
+the #content div is the container for a grid. 
+the .group class is to stretch all columns. the other classes .type, .crew, .passengers, .cargo, .plus, .minus, .vehicleCount are all one column wide.
+
+the resultcontainer is a column flexbox. 
+the imageDiv contains the image. the image will frequently get deleted and replaced with a new image. 
+the results div contains p elements which contain the amount of each selected vehicle, along with some stats. 
+the h4 element contains the results.
+the results div is a column flexbox.
+
+everything else is carte blanche.
+*/
+
 
 :root{
 	--var-grid-height: 30px;

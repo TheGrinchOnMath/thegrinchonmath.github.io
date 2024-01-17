@@ -447,7 +447,12 @@ function deductFromVehicleCount(vehicleId) {
 
 	// increment the counter by 1
 	count--;
-
+	
+	// keep count from being negative (this breaks the code)
+	if (count < 0) {
+		count = 0;
+	}
+	
 	// convert the count to string, reconvert it to a string and reinsert it into the node
 	countString = count;
 	vehicleCounter.innerText = countString;
@@ -475,11 +480,14 @@ function checkVehicleCount(vehicleId) {
 		count = maxVehicles;
 		plusButton.setAttribute("disabled", "true");
 		minusButton.setAttribute("disabled", "false");
-	} else if (0 > count > maxVehicles) {
+	} else if (0 > count < maxVehicles) {
 		// enable plus and minus button
 		plusButton.setAttribute("disabled", "false");
 		minusButton.setAttribute("disabled", "false");
 	}
+	// reinsert the modified count. 
+	// this prevents the code from softlocking as the conditions are set but count does not get reset properly
+	vehicleCounter.innerText = count;
 }
 
 // show the vehicles in a different div. requires: same stats as the content div. get the data from the content div
