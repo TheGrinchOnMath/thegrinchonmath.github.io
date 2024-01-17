@@ -110,3 +110,8 @@ h6 {
 #content p{
 	padding-right: 10px;
 }
+
+#imageDiv {
+	display: flex;
+	flex-direction: column;
+}

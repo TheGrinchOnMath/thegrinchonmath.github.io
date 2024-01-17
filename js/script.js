@@ -112,6 +112,7 @@ function loadImage(id) {
 	// create img element
 	let img = document.createElement("img");
 	img.setAttribute("id", "image");
+	img.setAttribute("class", "image");
 
 	// set the caption
 	img.setAttribute("alt", id);
@@ -148,8 +149,12 @@ function loadImage(id) {
 	}
 
 	// add img to the results div at the end
-	const results = document.getElementById("results");
-	results.insertAdjacentElement("beforeend", img);
+	const imageContainer = document.getElementById("imageDiv");
+
+	// empty ImageContainer
+
+	imageContainer.replaceChildren([]);
+	imageContainer.insertAdjacentElement("beforeend", img);
 }
 
 function initSides(sideArray) {
@@ -176,6 +181,7 @@ function initSides(sideArray) {
 		sides.insertAdjacentElement("beforeend", newSideArray[i]);
 	}
 
+	// empty factions and variants divs
 	factions.replaceChildren([]);
 	variants.replaceChildren([]);
 }
@@ -211,6 +217,8 @@ function factions(side) {
 	for (let i = 0; i < newFactionsArray.length; i++) {
 		factions.insertAdjacentElement("beforeend", newFactionsArray[i]);
 	}
+
+	// empty variants divs
 	variants.replaceChildren([]);
 }
 
@@ -295,6 +303,7 @@ function processVehicles(vehicles) {
 		// set new variable from motorpoolMap for ease of syntax
 		const data = motorpoolMap.get(vehicles[i].id);
 
+		// add vehicle ID to the list
 		idArray.push(vehicles[i].id.toLowerCase());
 
 		if (data == undefined) {
@@ -374,7 +383,7 @@ function processVehicles(vehicles) {
 			const plusId = vehicles[i].id + "Plus";
 			const plus = createButton(
 				{ id: plusId, type: "button", class: "plus" },
-				{ calculate: "", addToVehicleCount: vehicles[i].id }
+				{ addToVehicleCount: vehicles[i].id }
 			);
 			plus.innerText = "+";
 			plus.addEventListener("click", function () {
@@ -386,7 +395,7 @@ function processVehicles(vehicles) {
 			const minusId = vehicles[i].id + "Minus";
 			const minus = createButton(
 				{ id: minusId, type: "button", class: "minus" },
-				{ calculate: "", deductFromVehicleCount: vehicles[i].id }
+				{ deductFromVehicleCount: vehicles[i].id }
 			);
 			minus.innerText = "-";
 			contentNode.insertAdjacentElement("beforeend", minus);
@@ -397,6 +406,7 @@ function processVehicles(vehicles) {
 				id: vehicleCountId,
 				class: "vehicleCount",
 			});
+			vehicleCount.setAttribute("value", vehicles[i].id);
 			vehicleCount.innerText = "0";
 			vehicleCount.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
@@ -423,6 +433,7 @@ function addToVehicleCount(vehicleId) {
 	// convert the count to string, reconvert it to a string and reinsert it into the node
 	countString = count;
 	vehicleCounter.innerText = countString; // you can add numbers to innertext, will treat as string
+	showSelectedVehicles();
 }
 
 // remove from the count of the given vehicle
@@ -440,6 +451,7 @@ function deductFromVehicleCount(vehicleId) {
 	// convert the count to string, reconvert it to a string and reinsert it into the node
 	countString = count;
 	vehicleCounter.innerText = countString;
+	showSelectedVehicles();
 }
 
 //
@@ -470,35 +482,89 @@ function checkVehicleCount(vehicleId) {
 	}
 }
 
+// show the vehicles in a different div. requires: same stats as the content div. get the data from the content div
 function showSelectedVehicles() {
+	// reset input counter
+	for (let key in inputCounter) {
+		inputCounter[key] = 0;
+	}
+
+	// create object for use a couple of lines below
+	let idObject = new Object();
+
+	// get parent node
+	const parent = document.getElementById("results");
+	// get header inside parent node
+	const parentHeaderChild = parent.firstElementChild;
+
+	// empty parent node
+	parent.replaceChildren([]);
+	// reinsert header
+	parent.insertAdjacentElement("afterbegin", parentHeaderChild);
+
 	// get all text nodes containing the numerical values for the vehicle quantity
-	const counterNodes = document.getElementsByClassName("vehicleCounter");
+	const counterNodes = document.getElementsByClassName("vehicleCount");
+
+	// iterate through counterNodes
 	for (let i = 0; i < counterNodes.length; i++) {
-		console.log(node, typeof node, counterNodes[i], typeof counterNodes[i]);
-	}
-}
+		// get node
+		node = counterNodes[i];
 
-function calculate(str) {
-	this;
-}
+		// get node from the inner text
+		let value = Number(node.innerText);
 
-function addEventListenersToPNodes() {
-	const contentNode = document.getElementById("content");
-	const pNodes = contentNode.getElementsByTagName("p"); // list of p elements inside of div id:content
+		// get id from value attribute
+		let id = node.getAttribute("value");
 
-	// iterate through that list
-	for (let i = 0; 0 < pNodes.length; i++) {
-		// avoid spaghetti
-		let paragraph = pNodes[i];
-		if (paragraph == undefined) {
-			console.log(i, pNodes[i], pNodes[i - 1].id, pNodes[i - 1].innerText);
+		// if at least one vehicle has been selected, add the id and the value to the object
+		if (value > 0) {
+			idObject[id] = value;
 		}
-		// add the event listener for click, that calls the function showSelectedVehicles
-		paragraph.addEventListener("click", function () {
-			// call showSelectedVehicles()
-			showSelectedVehicles();
-		});
 	}
+
+	// get necessary data and create the text node
+	// iterates through the keys of the object
+	for (let key in idObject) {
+		const container = document.createElement("p");
+
+		// store value in variable to avoid variable salad
+		const value = idObject[key];
+
+		// load the innerText for every element in the content div that has vehicle data in it
+		const type = document.getElementById(`${key}Type`).innerText,
+			name = document.getElementById(`${key}Name`).innerText,
+			crew = document.getElementById(`${key}Crew`).innerText,
+			passengers = document.getElementById(`${key}Passengers`).innerText,
+			cargo = document.getElementById(`${key}Cargo`).innerText,
+			cargoValue = Number(cargo);
+
+		motorpoolData = motorpoolMap.get(key);
+
+		// add values to input counter
+		inputCounter.passengers += value * Number(motorpoolData[3]);
+		inputCounter.crew += value * Number(motorpoolData[2]);
+
+		if (cargoValue > 0) {
+			inputCounter.cargo += value * cargoValue;
+		}
+
+		// construct string to be put in the paragraph
+		const str = `${value}x ${name}:   type: ${type}, crew: ${crew}, passengers: ${passengers}, cargo: ${cargo}`;
+
+		container.innerText = str;
+		parent.insertAdjacentElement("beforeend", container);
+	}
+	// create finalResult div, add innerText and insert into parent div
+	const finalResult = document.createElement("h4");
+	finalResult.innerText =
+		"Current Preset requires " +
+		inputCounter.crew +
+		" crew. It provides space for " +
+		inputCounter.passengers +
+		" passengers, as well as " +
+		inputCounter.cargo +
+		" cargo slots.";
+	parent.insertAdjacentElement("beforeend", finalResult);
 }
 
 // credit = https://stackoverflow.com/a/35341828
