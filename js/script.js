@@ -101,62 +101,42 @@ function removeChildren(id) {
 	}
 }
 
-// get image from path, load image to given location in html
+
 function loadImage(id) {
-	// bring id to lowercase to search for a match in the images
-	const lowerCaseId = id.toLowerCase();
+	let img = document.getElementById("image")
+	let id = id.toLowerCase();
 
 	// create url for localhost
-	const imgUrl = `/img/${id}.jpg`;
+	const url = `/img/${id}.jpg`;
+	let imgUrl = "/img/missing.jpg"
 
-	// create img element
-	let img = document.createElement("img");
-	img.setAttribute("id", "image");
-	img.setAttribute("class", "image");
+	if (asyncCheckFileExists(url)) {
+		// use the image from the image dir
+		imgUrl = url;
+	}
 
-	// set the caption
+
+	// check if DOM already exists
+	if (img === null) {
+		// get parent
+		const parentElement = document.getElementById("imageDiv");
+
+		// create element
+		img = document.createElement("img");
+		// set id, class
+		img.setAttribute("id", "image");
+		img.setAttribute("class", "image");
+		parentElement.insertAdjacentElement("beforeend", img);
+	}
+
+	// change what image the element fetches
+	img.setAttribute("src", imgUrl);
+	// change the alt to be the image id
 	img.setAttribute("alt", id);
-
-	//--------set max width and height to small--------//
-
-	// declare variables
-	const width = img.width,
-		height = img.height;
-	let newWidth, newHeight;
-
-	// change size of image depending on below conditions
-	if (width > height) {
-		newWidth = 128;
-		newHeight = (width / newWidth) * height;
-	} else if (width < height) {
-		newHeight = 128;
-		newWidth = (height / newHeight) * width;
-	} else {
-		newWidth = newHeight = 128;
-	}
-
-	// resize image
-	img.width = newWidth;
-	img.height = newHeight;
-
-	// check if its inside the directory of images
-	if (asyncCheckFileExists(imgUrl)) {
-		// use the image from the img dir
-		img.setAttribute("src", imgUrl);
-	} else {
-		// use the missing img image
-		img.setAttribute("src", "/img/missing.jpg");
-	}
-
-	// add img to the results div at the end
-	const imageContainer = document.getElementById("imageDiv");
-
-	// empty ImageContainer
-
-	imageContainer.replaceChildren([]);
-	imageContainer.insertAdjacentElement("beforeend", img);
+	
 }
 
+// this function gets called by parse, and creates the sides buttons. also empties factions and variants
 function initSides(sideArray) {
 	// get nodes for sides, factions, variants
 	const sides = document.getElementById("sides"),
@@ -420,15 +400,16 @@ function processVehicles(vehicles) {
 
 // add to the counter of the given vehicle
 function addToVehicleCount(vehicleId) {
-	// check if the counter is ok
-	checkVehicleCount(vehicleId);
-
 	// get vehicle counter, extract count
 	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`);
 	let count = Number(vehicleCounter.innerText);
 
 	// increment the counter by 1
 	count++;
+
+	if (count > maxVehicles) {
+		count = maxVehicles;
+	}
 
 	// convert the count to string, reconvert it to a string and reinsert it into the node
 	countString = count;
@@ -438,56 +419,22 @@ function addToVehicleCount(vehicleId) {
 
 // remove from the count of the given vehicle
 function deductFromVehicleCount(vehicleId) {
-	// check if the counter is ok
-	checkVehicleCount(vehicleId);
-
 	// get vehicle counter, extract count
 	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`);
 	let count = Number(vehicleCounter.innerText);
 
 	// increment the counter by 1
 	count--;
-	
+
 	// keep count from being negative (this breaks the code)
 	if (count < 0) {
 		count = 0;
 	}
-	
+
 	// convert the count to string, reconvert it to a string and reinsert it into the node
 	countString = count;
 	vehicleCounter.innerText = countString;
 	showSelectedVehicles();
-}
-
-//
-function checkVehicleCount(vehicleId) {
-	// get vehicleCounter and button elements
-	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`),
-		plusButton = document.getElementById(`${vehicleId}Plus`),
-		minusButton = document.getElementById(`${vehicleId}Minus`);
-
-	// get count from vehicleCounter
-	let count = Number(vehicleCounter.innerText);
-
-	if (count < 0) {
-		// set count to 0, disable the minus button and enable the plus button
-		count = 0;
-		console.log("how did that happen");
-		plusButton.setAttribute("disabled", "false");
-		minusButton.setAttribute("disabled", "true");
-	} else if (count > maxVehicles) {
-		// disable the plus button, enable the minus button, set count to 10
-		count = maxVehicles;
-		plusButton.setAttribute("disabled", "true");
-		minusButton.setAttribute("disabled", "false");
-	} else if (0 > count < maxVehicles) {
-		// enable plus and minus button
-		plusButton.setAttribute("disabled", "false");
-		minusButton.setAttribute("disabled", "false");
-	}
-	// reinsert the modified count. 
-	// this prevents the code from softlocking as the conditions are set but count does not get reset properly
-	vehicleCounter.innerText = count;
 }
 
 // show the vehicles in a different div. requires: same stats as the content div. get the data from the content div
