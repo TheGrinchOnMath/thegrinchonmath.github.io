@@ -104,10 +104,10 @@ function removeChildren(id) {
 
 function loadImage(id) {
 	let img = document.getElementById("image")
-	let id = id.toLowerCase();
+	let imgId = id.toLowerCase();
 
 	// create url for localhost
-	const url = `/img/${id}.jpg`;
+	const url = `/img/${imgId}.jpg`;
 	let imgUrl = "/img/missing.jpg"
 
 	if (asyncCheckFileExists(url)) {
@@ -132,7 +132,7 @@ function loadImage(id) {
 	// change what image the element fetches
 	img.setAttribute("src", imgUrl);
 	// change the alt to be the image id
-	img.setAttribute("alt", id);
+	img.setAttribute("alt", imgId);
 	
 }
 
