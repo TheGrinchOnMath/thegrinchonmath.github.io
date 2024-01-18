@@ -297,7 +297,7 @@ function processVehicles(vehicles) {
 				id: typeId,
 				class: "type",
 			});
-			type.innerText = data[1];
+			type.innerText = "type: " + data[1];
 			type.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
 			});
@@ -321,7 +321,7 @@ function processVehicles(vehicles) {
 				id: crewId,
 				class: "crew",
 			});
-			crew.innerText = data[2];
+			crew.innerText = "crew: " + data[2];
 			crew.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
 			});
@@ -336,7 +336,7 @@ function processVehicles(vehicles) {
 			passengers.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
 			});
-			passengers.innerText = data[3];
+			passengers.innerText = "passengers: " + data[3];
 			contentNode.insertAdjacentElement("beforeend", passengers);
 
 			// create cargo node, set attributes
@@ -349,7 +349,7 @@ function processVehicles(vehicles) {
 			if (vehicles[i].cargo == -1) {
 				cargo.innerText = 0;
 			} else {
-				cargo.innerText = vehicles[i].cargo;
+				cargo.innerText = "cargo: " + vehicles[i].cargo;
 			}
 
 			cargo.addEventListener("click", function () {
@@ -392,6 +392,11 @@ function processVehicles(vehicles) {
 				loadImage(vehicles[i].id);
 			});
 			contentNode.insertAdjacentElement("beforeend", vehicleCount);
+
+			// create thin black line between vehicles
+			const gridRowSeparator = document.createElement("div");
+			gridRowSeparator.setAttribute("class", "gridRowSeparator");
+			contentNode.insertAdjacentElement("beforeend", gridRowSeparator);
 		}
 	}
 }

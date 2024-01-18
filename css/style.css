@@ -20,7 +20,7 @@ everything else is carte blanche.
 }
 
 
-button {
+#variants button, #factions button, #sides button {
 	background-color: lightgrey;
 	border-color: lightgrey;
 	border-style: solid;
@@ -83,12 +83,19 @@ h6 {
 
 .plus,
 .minus {
-	height: inherit;
+	height: fit-content;
+	padding: 5px;
+	border: 2px;
+	border-style: solid;
+	border-color: rgb(110, 109, 109);
 }
 
 #content {
 	display: grid;
 	grid-template-columns:  fr fr fr fr fr fr fr ;
+	grid-template-rows: 50px;
+	grid-auto-rows: 50px;
+	margin: 0px;
 }
 
 .group {
@@ -96,35 +103,27 @@ h6 {
 	grid-column-end: 9;
 }
 
-.type {
-	height:	inherit;
-}
-.name {
-	height: inherit;
-}
-.crew {
-	height: inherit;
-}
-.passengers{
-	height: inherit;
-}
-.cargo {
-	height: inherit;
-}
-
-
 /* grid layout:
 8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter
 1 row per vehicle
 */
 
 
-#content {
+#content button{
 	height: 30px;
+	width: 30px;
+	background-color: lightgrey;
+	border-color: black;
+	border-style: solid;
 }
 
 #content p{
-	padding-right: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0px;
 }
 
 #imageDiv {
@@ -134,4 +133,19 @@ h6 {
 
 img {
 	width: 512px;
+}
+
+#resultContainer {
+	margin-left: 20px;
+}
+
+#content .gridRowSeparator {
+	background-color: black;
+	height: 5px;
+	grid-column-start:1;
+	grid-column-end: 9;
+}
+
+div {
+	margin: 0px;
 }
