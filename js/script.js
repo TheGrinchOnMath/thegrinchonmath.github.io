@@ -101,20 +101,18 @@ function removeChildren(id) {
 	}
 }
 
-
 function loadImage(id) {
-	let img = document.getElementById("image")
+	let img = document.getElementById("image");
 	let imgId = id.toLowerCase();
 
 	// create url for localhost
 	const url = `/img/${imgId}.jpg`;
-	let imgUrl = "/img/missing.jpg"
+	let imgUrl = "/img/missing.jpg";
 
 	if (asyncCheckFileExists(url)) {
 		// use the image from the image dir
 		imgUrl = url;
 	}
-
 
 	// check if DOM already exists
 	if (img === null) {
@@ -133,7 +131,6 @@ function loadImage(id) {
 	img.setAttribute("src", imgUrl);
 	// change the alt to be the image id
 	img.setAttribute("alt", imgId);
-	
 }
 
 // this function gets called by parse, and creates the sides buttons. also empties factions and variants
@@ -296,6 +293,7 @@ function processVehicles(vehicles) {
 			const type = createTextNode({
 				id: typeId,
 				class: "type",
+				value: data[1],
 			});
 			type.innerText = "type: " + data[1];
 			type.addEventListener("click", function () {
@@ -308,6 +306,7 @@ function processVehicles(vehicles) {
 			const name = createTextNode({
 				id: nameId,
 				class: "name",
+				value: data[0],
 			});
 			name.innerText = data[0];
 			name.addEventListener("click", function () {
@@ -320,6 +319,7 @@ function processVehicles(vehicles) {
 			const crew = createTextNode({
 				id: crewId,
 				class: "crew",
+				value: data[2],
 			});
 			crew.innerText = "crew: " + data[2];
 			crew.addEventListener("click", function () {
@@ -332,6 +332,7 @@ function processVehicles(vehicles) {
 			const passengers = createTextNode({
 				id: passengersId,
 				class: "passengers",
+				value: data[3],
 			});
 			passengers.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
@@ -346,10 +347,13 @@ function processVehicles(vehicles) {
 				class: "cargo",
 			});
 
-			if (vehicles[i].cargo == -1) {
-				cargo.innerText = 0;
-			} else {
+			// check if cargo is enabled or disabled
+			if (vehicles[i].cargo != -1) {
 				cargo.innerText = "cargo: " + vehicles[i].cargo;
+				cargo.setAttribute("value", vehicles[i].cargo);
+			} else {
+				cargo.innerText = "cargo: " + 0;
+				cargo.setAttribute("value", 0);
 			}
 
 			cargo.addEventListener("click", function () {
@@ -491,11 +495,11 @@ function showSelectedVehicles() {
 		const value = idObject[key];
 
 		// load the innerText for every element in the content div that has vehicle data in it
-		const type = document.getElementById(`${key}Type`).innerText,
-			name = document.getElementById(`${key}Name`).innerText,
-			crew = document.getElementById(`${key}Crew`).innerText,
-			passengers = document.getElementById(`${key}Passengers`).innerText,
-			cargo = document.getElementById(`${key}Cargo`).innerText,
+		const type = document.getElementById(`${key}Type`).getAttribute("value"),
+			name = document.getElementById(`${key}Name`).getAttribute("value"),
+			crew = document.getElementById(`${key}Crew`).getAttribute("value"),
+			passengers = document.getElementById(`${key}Passengers`).getAttribute("value"),
+			cargo = document.getElementById(`${key}Cargo`).getAttribute("value"),
 			cargoValue = Number(cargo);
 
 		motorpoolData = motorpoolMap.get(key);
