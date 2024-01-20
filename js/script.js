@@ -133,6 +133,17 @@ function loadImage(id) {
 	img.setAttribute("alt", imgId);
 }
 
+// empties the resultContainer child divs
+function resetResults() {
+	// get the parent div of the image and the parent div of the results
+	let imageDiv = document.getElementById("imageDiv");
+	let results = document.getElementById("results");
+
+	// empty both divs
+	results.replaceChildren([]);
+	imageDiv.replaceChildren([]);
+}
+
 // this function gets called by parse, and creates the sides buttons. also empties factions and variants
 function initSides(sideArray) {
 	// get nodes for sides, factions, variants
@@ -161,13 +172,17 @@ function initSides(sideArray) {
 	// empty factions and variants divs
 	factions.replaceChildren([]);
 	variants.replaceChildren([]);
+
+	// empty the results
+	resetResults();
 }
 
 //
 function factions(side) {
-	// get nodes for factions and variants
+	// get nodes for factions, variants and content
 	const factions = document.getElementById("factions"),
-		variants = document.getElementById("variants");
+		variants = document.getElementById("variants"),
+		content = document.getElementById("content");
 
 	// init new array for holding the buttons for later use with replaceChildren
 	let newFactionsArray = new Array();
@@ -195,8 +210,12 @@ function factions(side) {
 		factions.insertAdjacentElement("beforeend", newFactionsArray[i]);
 	}
 
-	// empty variants divs
+	// empty variants, content divs
 	variants.replaceChildren([]);
+	content.replaceChildren([]);
+
+	// empty results
+	resetResults();
 }
 
 // create variants based on the called faction
@@ -228,6 +247,9 @@ function variants(faction) {
 		variants.insertAdjacentElement("beforeend", newVariantsArray[i]);
 	}
 	content.replaceChildren([]);
+
+	// empty results
+	resetResults();
 }
 
 // variant parameter is an object, extracted from factions.json
@@ -446,6 +468,19 @@ function deductFromVehicleCount(vehicleId) {
 	showSelectedVehicles();
 }
 
+function resetVehicleSelection() {
+	// get selected vehicles
+	const vehicleCounts = document.getElementsByClassName("vehicleCount");
+
+	// iterate through selected vehicles and empty content
+	for (let i = 0; i < vehicleCounts.length; i++) {
+		count = vehicleCounts[i];
+		count.innerText = 0;
+	}
+	// reset results
+	resetResults();
+}
+
 // show the vehicles in a different div. requires: same stats as the content div. get the data from the content div
 function showSelectedVehicles() {
 	// reset input counter
@@ -458,13 +493,24 @@ function showSelectedVehicles() {
 
 	// get parent node
 	const parent = document.getElementById("results");
-	// get header inside parent node
-	const parentHeaderChild = parent.firstElementChild;
+
+	// create "reset" button
+	const resetButton = createButton(
+		{ id: "resetButton" },
+		{ resetVehicleSelection: null }
+	);
+	resetButton.innerText = "Reset Vehicle selection";
+
+	// create header for inside parent node
+	const selectedVehicles = document.createElement("h3");
+	selectedVehicles.setAttribute("id", "resultData");
+	selectedVehicles.innerText = "Selected Vehicles:";
 
 	// empty parent node
 	parent.replaceChildren([]);
-	// reinsert header
-	parent.insertAdjacentElement("afterbegin", parentHeaderChild);
+	// insert header, insert button
+	parent.insertAdjacentElement("afterbegin", selectedVehicles);
+	parent.insertAdjacentElement("afterbegin", resetButton);
 
 	// get all text nodes containing the numerical values for the vehicle quantity
 	const counterNodes = document.getElementsByClassName("vehicleCount");
@@ -498,7 +544,9 @@ function showSelectedVehicles() {
 		const type = document.getElementById(`${key}Type`).getAttribute("value"),
 			name = document.getElementById(`${key}Name`).getAttribute("value"),
 			crew = document.getElementById(`${key}Crew`).getAttribute("value"),
-			passengers = document.getElementById(`${key}Passengers`).getAttribute("value"),
+			passengers = document
+				.getElementById(`${key}Passengers`)
+				.getAttribute("value"),
 			cargo = document.getElementById(`${key}Cargo`).getAttribute("value"),
 			cargoValue = Number(cargo);
 
