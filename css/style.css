@@ -14,138 +14,268 @@ the results div is a column flexbox.
 everything else is carte blanche.
 */
 
+/*
+ * Fonts
+ */
 
-:root{
-	--var-grid-height: 30px;
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/fonts/philosopher/Philosopher-Regular.ttf');
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/fonts/philosopher/Philosopher-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/fonts/philosopher/Philosopher-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: url('/fonts/philosopher/Philosopher-Italic.ttf');
+    font-style: italic;
 }
 
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/pt-sans/PTSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/pt-sans/PTSans-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/pt-sans/PTSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/pt-sans/PTSans-Italic.ttf');
+    font-style: italic;
+}
 
-#variants button, #factions button, #sides button {
+/*
+ * Variables
+ */
+
+:root {
+    /* PXG palette colours */
+
+    /* "Jet" */
+    --clr-pxg-dark: #2d2c2d;
+    /* "Cinnabar" */
+    --clr-pxg-red: #f1372a;
+    /* "Yellow Orange Color Wheel */
+    --clr-pxg-orange: #f8951d;
+    /* "Cultured" */
+    --clr-pxg-light: #eaebee;
+    /* "Rich Black FOGRA 39" */
+    --clr-pxg-black: #0a0a0a;
+
+    /* Font colours */
+    --clr-font-dark: var(--clr-pxg-dark);
+    --clr-font-light: var(--clr-pxg-light);
+
+    /* Background colours */
+    --clr-bg-dark: var(--clr-pxg-dark);
+    --clr-bg-medium: #4d4c4c;
+    --clr-bg-light: var(--clr-pxg-light);
+
+    /* Link colours */
+    --clr-link:         var(--clr-pxg-orange);
+    --clr-link-hover:   var(--clr-pxg-red);
+    --clr-link-visited: purple;
+}
+
+/*
+ * General
+ */
+
+html {
+    background-color: var(--clr-bg-dark);
+}
+
+body {
+    width: 1500px;
+    margin: 20px auto;
+}
+
+/*
+ * Typography
+ */
+
+html {
+    font-size: 18px;
+    color: var(--clr-font-light);
+    font-family: 'PT Sans';
+}
+
+input, button {
+    font-family: inherit;
+    font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 1.8rem 0 0.8rem;
+    line-height: 1.24em;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Philosopher';
+}
+
+h1 { font-size: 2.441rem; }
+h2 { font-size: 1.953rem; }
+h3 { font-size: 1.563rem; }
+h4 { font-size: 1.25rem;  }
+h5 { font-size: 1rem;     }
+
+p, li, td {
+    line-height: 1.5em;
+}
+
+p {
+    margin: 10px 0 10px 0;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--clr-link);
+    transition: color 160ms;
+}
+a:hover {
+    color: red;
+    color: var(--clr-link-hover);
+}
+a:visited {
+    color: var(--clr-link-visited);
+}
+
+/*
+ * Buttons
+ */
+
+button {
+    padding: 0.2em 0.5em;
+    margin: 0.1em 0.2em;
+}
+button {
 	background-color: lightgrey;
+	border-radius: 2px;
 	border-color: lightgrey;
 	border-style: solid;
 	margin-bottom: 5px;
 }
 
-body {
-	background-color: rgb(138, 138, 138);
-	color: rgb(138, 138, 138);
+button#blufor {
+    background-color: #2e60f9;
+    border-color: #7e7ef7;
+    color: var(--clr-font-light);
+}
+button#opfor {
+    background-color: #b91b1b;
+    border-color: #d95656;
+    color: var(--clr-font-light);
+}
+button#indep {
+    background-color: #2a8e2a;
+    border-color: #3ca825;
+    color: var(--clr-font-light);
 }
 
-#sides {
-	/*setup the flexbox to be vertical*/
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
+#variants button {
+    background-color: #7335bd;
+    border-color: #b073d9;
+    color: var(--clr-font-light);
 }
-#factions {
-	/*setup the flexbox to be vertical*/
-	display: flex;
-	flex-direction: column;
 
-	padding: 5px;
-}
-#variants {
-	/*setup the flexbox to be vertical*/
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
-	color: "blue";
-}
+/*
+ * Page layout
+ */
+
 #buttonContainer {
-	/*setup the flexbox to be vertical*/
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
 }
 
-p {
-	color: black;
-	background-color: lightgrey;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: black;
-	font: arial;
-	align-content: center;
-}
-
-#calculate {
-	height: fit-content;
-	margin: 17.5px;
-	font-size: 20px;
-}
-
-.plus,
-.minus {
-	height: fit-content;
-	padding: 5px;
-	border: 2px;
-	border-style: solid;
-	border-color: rgb(110, 109, 109);
-}
-
-#content {
-	display: grid;
-	grid-template-columns:  fr fr fr fr fr fr fr ;
-	grid-template-rows: 50px;
-	grid-auto-rows: 50px;
-	margin: 0px;
-}
-
-.group {
-	grid-column-start:1;
-	grid-column-end: 9;
-}
-
-/* grid layout:
-8 columns. type, vehicle, crew, passenger, cargo, +, -, vehicleCounter
-1 row per vehicle
-*/
-
-
-#content button{
-	height: 30px;
-	width: 30px;
-	background-color: lightgrey;
-	border-color: black;
-	border-style: solid;
-}
-
-#content p{
-	padding-right: 5px;
-	padding-left: 5px;
-	height: 30px;
-	text-align: center;
-	vertical-align: middle;
-	margin: 0px;
-}
-
-#imageDiv {
+#buttonContainer > div {
 	display: flex;
 	flex-direction: column;
+	padding: 0.2em;
 }
 
-img {
-	width: 512px;
+input {
+	padding: 0.2em;
+	margin: 10px;
+    height: 1.6em;
+	width: 2.8em;
 }
 
-#resultContainer {
-	margin-left: 20px;
+#buttonContainer #content {
+    margin-left: 1em;
+    margin-right: 1em;
+	display: grid;
+	grid-template-columns:  1.3fr 1.5fr 0.6fr 1.1fr 0.7fr 2em 1.8em 2em;
+    column-gap: 0.3em;
+    align-items: center;
 }
-
 #content .gridRowSeparator {
-	background-color: black;
-	height: 5px;
+	background-color: var(--clr-pxg-orange);
+	height: 1px;
+	grid-column-start:1;
+	grid-column-end: 9;
+    margin: 0 -0.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+}
+#content p {
+    margin: 0;
+}
+#content h4:first-of-type {
+    margin-top: 0;
+}
+#content h4 {
+    margin-bottom: 0.2em;
+}
+#content button {
+    height: 2em;
+    width: 2em;
+}
+#content .group {
 	grid-column-start:1;
 	grid-column-end: 9;
 }
+#content .plus {
+    background-color: #baffba;
+}
+#content .minus {
+    background-color: #ffc3c3;
+}
+#content .vehicleCount {
+    text-align: right;
+}
 
-div {
-	margin: 0px;
+#results {
+    width: 350px;
+}
+#results h3:first-child {
+    margin-top: 0;
+}
+#image {
+    display: block;
+    text-align: center;
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+	border: 1px solid var(--clr-pxg-orange);
+	border-radius: 6px;
+    margin-bottom: 1em;
 }
