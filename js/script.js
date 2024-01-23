@@ -14,9 +14,12 @@ let maxVehicles = 10,
 let inputCounter = { passengers: 0, crew: 0, cargo: 0, turrets: [] };
 
 // arrays for use with checking if images are in the img directory
-let idArray = new Array();
-urlArray = new Array();
-notThereArray = new Array();
+let idArray = new Array(),
+	urlArray = new Array(),
+	notThereArray = new Array();
+
+// array to keep track of what air elements are in the selected variant
+let airElementsArray = new Array();
 
 // fetch json file, return js object. dont modify as promises are weird
 async function parseJson(path) {
@@ -257,6 +260,9 @@ async function generateContent(variant) {
 	// get content node
 	const contentNode = document.getElementById("content");
 
+	// reset airElements array
+	airElementsArray = new Array();
+
 	// iterate through variant.motorpool array
 	for (let i = 0; i < variant.motorpool.length; i++) {
 		// create variable to store the data of the variant motorpool group, get the content node
@@ -275,7 +281,7 @@ async function generateContent(variant) {
 
 		// get vehicles from group, process vehicles
 		const vehicles = group.vehicles;
-		processVehicles(vehicles);
+		processVehicles(vehicles, group);
 	}
 }
 
@@ -293,9 +299,31 @@ function createTextNode(attributes) {
 }
 
 // process vehicles of each group and insert into the content div at the right spot
-function processVehicles(vehicles) {
+function processVehicles(vehicles, group) {
 	// get content div
 	const contentNode = document.getElementById("content");
+	const groupName = group.group;
+	let crewSeats;
+	let airAsset = false;
+	// check for all group names
+	if (
+		groupName == "Rotary Transport" ||
+		groupName == "Rotary Attack" ||
+		groupName == "Fixed Wing Transport" ||
+		groupName == "Fixed Wing Attack"
+	) {
+		airAsset = true;
+		crewSeats = 1;
+		// do something with TACP later here
+	} else if (groupName == "APC" || groupName == "SPAA" || groupName == "SPG") {
+		crewSeats = 2;
+	} else if (groupName == "IFV" || groupName == "MBT") {
+		crewSeats = 3;
+	}
+	// the not speshal vehicles do not need a dedicated crew so no need to calculate
+	else {
+		crewSeats = 0;
+	}
 
 	// iterate through vehicles
 	for (let i = 0; i < vehicles.length; i++) {
@@ -308,6 +336,13 @@ function processVehicles(vehicles) {
 		if (data == undefined) {
 			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
 		} else {
+			if (airAsset) {
+				airElementsArray.push(vehicles[i].id);
+			}
+			// calculate the correct passenger and crew counts
+			const totalSeats = Number(data[2]) + Number(data[3]);
+			const passengerSeats = totalSeats - crewSeats;
+
 			// create all the elements for the row of the grid for the vehicle
 
 			// create type node, set attributes
@@ -343,7 +378,7 @@ function processVehicles(vehicles) {
 				class: "crew",
 				value: data[2],
 			});
-			crew.innerText = "crew: " + data[2];
+			crew.innerText = "crew: " + crewSeats;
 			crew.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
 			});
@@ -354,7 +389,7 @@ function processVehicles(vehicles) {
 			const passengers = createTextNode({
 				id: passengersId,
 				class: "passengers",
-				value: data[3],
+				value: passengerSeats,
 			});
 			passengers.addEventListener("click", function () {
 				loadImage(vehicles[i].id);
@@ -571,16 +606,53 @@ function showSelectedVehicles() {
 	finalResult.innerText =
 		"Current Preset requires " +
 		inputCounter.crew +
-		" crew. It provides space for " +
+		" dedicated crew. It provides space for " +
 		inputCounter.passengers +
-		" passengers, as well as " +
+		" passengers. There are  " +
 		inputCounter.cargo +
-		" cargo slots.";
+		" total cargo slots.";
 	parent.insertAdjacentElement("beforeend", finalResult);
+	let str = calculateAirControlReqs();
+	if (str != "") {
+		const TACPstring = document.createElement("h4");
+		TACPstring.innerHTML = "<br/>" + str;
+		parent.insertAdjacentElement("beforeend", TACPstring);
+	}
+}
+
+// calculate TACP element reqs based on air element count
+function calculateAirControlReqs() {
+	const vehicleCountArr = document.getElementsByClassName("vehicleCount");
+	let airVehicles = 0;
+	let fullRoles = false;
+	let reducedRoles = false;
+	// iterate through vehicleCounts
+	for (let i = 0; i < vehicleCountArr.length; i++) {
+		// get vehicle from array
+		const vehicleCountNode = vehicleCountArr[i];
+		const vehicleCount = Number(vehicleCountNode.innerText);
+		// check if vehicle is inside the array created earlier
+		if (
+			airElementsArray.includes(vehicleCountNode.getAttribute("value")) &&
+			vehicleCount != 0
+		) {
+			airVehicles += vehicleCount;
+		}
+	}
+	// string to output
+	let str = "TACP requirements: ";
+
+	if (airVehicles === 1) {
+		str = str + "1 FAC and PL who acts as JTAC";
+	} else if (airVehicles > 1) {
+		str = str + "Full TACP team: 1 FAC and 1 JTAC";
+	} else {
+		str = "";
+	}
+	return str;
 }
 
 // credit = https://stackoverflow.com/a/35341828
-
 function checkImagesArr(array) {
 	for (let index = 0; index < array.length; index++) {
 		const id = array[index].toLowerCase();
