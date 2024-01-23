@@ -601,6 +601,15 @@ function showSelectedVehicles() {
 		container.innerText = str;
 		parent.insertAdjacentElement("beforeend", container);
 	}
+
+	// check TACP reqs
+	let str = calculateAirControlReqs();
+	const TACPstring = document.createElement("h4");
+	if (str != "") {
+		TACPstring.innerHTML = "<br/>" + str;
+	} else {
+		TACPstring.innerHTML = "";
+	}
 	// create finalResult div, add innerText and insert into parent div
 	const finalResult = document.createElement("h4");
 	finalResult.innerText =
@@ -612,12 +621,8 @@ function showSelectedVehicles() {
 		inputCounter.cargo +
 		" total cargo slots.";
 	parent.insertAdjacentElement("beforeend", finalResult);
-	let str = calculateAirControlReqs();
-	if (str != "") {
-		const TACPstring = document.createElement("h4");
-		TACPstring.innerHTML = "<br/>" + str;
-		parent.insertAdjacentElement("beforeend", TACPstring);
-	}
+
+	parent.insertAdjacentElement("beforeend", TACPstring);
 }
 
 // calculate TACP element reqs based on air element count
