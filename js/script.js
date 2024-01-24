@@ -21,6 +21,9 @@ let idArray = new Array(),
 // array to keep track of what air elements are in the selected variant
 let airElementsArray = new Array();
 
+// 2 Seat helis array
+const twoSeaterHelis = ["RHS_AH1Z_wd", "LOP_IRAN_AH1Z_WD", "BWA3_Tiger_RMK", "RHS_AH64D", "rhs_mi28n_vvsc"]
+
 // fetch json file, return js object. dont modify as promises are weird
 async function parseJson(path) {
 	const request = await fetch(path);
@@ -312,6 +315,7 @@ function processVehicles(vehicles, group) {
 		groupName == "Fixed Wing Transport" ||
 		groupName == "Fixed Wing Attack"
 	) {
+
 		airAsset = true;
 		crewSeats = 1;
 		// do something with TACP later here
@@ -336,6 +340,11 @@ function processVehicles(vehicles, group) {
 		if (data == undefined) {
 			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
 		} else {
+
+			if (airAsset && twoSeaterHelis.includes(vehicles[i].id)) {
+				crewSeats = 2;
+			}
+
 			if (airAsset) {
 				airElementsArray.push(vehicles[i].id);
 			}
