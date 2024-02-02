@@ -154,10 +154,6 @@ a:hover {
     color: red;
     color: var(--clr-link-hover);
 }
-a:visited {
-    color: var(--clr-link-visited);
-}
-
 /*
  * Buttons
  */

@@ -10,10 +10,12 @@ Example: blufor, shows US factions, Germany, etc buttons
 - Select a faction by clicking on it. this should show availiable variants for that faction.
 Example: clicked on US airborne. Modern and Early show. 
 
-- Select a variant by clicking on it. this will load the vehicles corresponding to that variant.
+- Select a variant by clicking on it. this will load the vehicles corresponding to that variant. 
+Example: clicked on US Army Mechanized Modern, vehicles will load in the middle.
 
-Add the number of each vehicle you want to see the statistics for using the inputs on the right hand side.
+- Select the vehicles by using the **+** and **-** buttons. the selection should update automatically. If you click on a vehicle in the middle part, it will try to load the image. if it does not, that is normal and expected.
 
-- Click the `calculate` button. this will show the total seats, crew (not roles, yet), cargo of the chosen selection.
+- If you want to reset your selection, click the reset button.
 
-- Done! <img src="https://cdn3.emoji.gg/emojis/9109_Sad_Cat_Thumbs_Up.png" width="50" height="50" />
+#### Done! 
+If you find any bugs, issues, or other problems, please create an issue detailing what you found and what steps you took to create the bug. (what buttons you clicked)
