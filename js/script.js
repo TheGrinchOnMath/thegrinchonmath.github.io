@@ -2,6 +2,7 @@
 Script for the motorpool visualization website
 */
 
+//----------VARIABLES----------//
 // Declare Global Variables
 let motorpoolMap = new Map(),
 	motorpoolTree = null;
@@ -22,7 +23,17 @@ let idArray = new Array(),
 let airElementsArray = new Array();
 
 // 2 Seat helis array
-const twoSeaterHelis = ["RHS_AH1Z_wd", "LOP_IRAN_AH1Z_WD", "BWA3_Tiger_RMK", "RHS_AH64D", "rhs_mi28n_vvsc"]
+const twoSeaterHelis = [
+	"RHS_AH1Z_wd",
+	"LOP_IRAN_AH1Z_WD",
+	"BWA3_Tiger_RMK",
+	"RHS_AH64D",
+	"rhs_mi28n_vvsc",
+];
+
+// this variable tracks all of the vehicles with missing data
+let missingVehicleDataArr = new Array();
+//-------------------------------//
 
 // fetch json file, return js object. dont modify as promises are weird
 async function parseJson(path) {
@@ -57,6 +68,8 @@ async function parse(factionsPath, motorpoolPath) {
 			motorpool.turrets,
 		]);
 	}
+	// call debug function for missing data, uncomment below line to print the ids to console
+	//console.log(checkMissingVehicles());
 
 	// call initSides, creates sides buttons from the array created earlier
 	initSides(sides);
@@ -308,6 +321,7 @@ function processVehicles(vehicles, group) {
 	const groupName = group.group;
 	let crewSeats;
 	let airAsset = false;
+
 	// check for all group names
 	if (
 		groupName == "Rotary Transport" ||
@@ -315,7 +329,6 @@ function processVehicles(vehicles, group) {
 		groupName == "Fixed Wing Transport" ||
 		groupName == "Fixed Wing Attack"
 	) {
-
 		airAsset = true;
 		crewSeats = 1;
 		// do something with TACP later here
@@ -339,8 +352,8 @@ function processVehicles(vehicles, group) {
 
 		if (data == undefined) {
 			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
+			missingVehicleDataArr.push(vehicles[i].id);
 		} else {
-
 			if (airAsset && twoSeaterHelis.includes(vehicles[i].id)) {
 				crewSeats = 2;
 			}
@@ -702,5 +715,35 @@ async function asyncCheckFileExists(url) {
 	};
 }
 
+// used to find missing data in motorpool.json
+function checkMissingVehicles() {
+	let missingDataArray = new Array();
+	for (let sideName in factionsTree) {
+		let side = factionsTree[sideName];
+		for (let i = 0; i < side.length; i++) {
+			let faction = side[i];
+			let variantNumber = faction.variants.length;
+			for (let j = 0; j < variantNumber; j++){
+				let variant = faction.variants[j];
+				for (let k = 0; k < variant.motorpool.length; k++) {
+					group = variant.motorpool[k];
+					for (let l = 0; l < group.vehicles.length; l++) {
+						vehicle = group.vehicles[l];
+						if (motorpoolMap.get(vehicle.id) === undefined) {
+							missingDataArray.push(vehicle.id);
+						}
+					}
+				}
+			}
+		}
+	}
+	return removeDuplicates(missingDataArray);
+}
+
+// credit: https://www.geeksforgeeks.org/how-to-remove-duplicate-elements-from-javascript-array/
+function removeDuplicates(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+}
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
