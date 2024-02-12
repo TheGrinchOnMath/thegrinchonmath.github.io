@@ -319,7 +319,7 @@ function processVehicles(vehicles, group) {
 	// get content div
 	const contentNode = document.getElementById("content");
 	const groupName = group.group;
-	let crewSeats;
+	let crewSeats = new Number();
 	let airAsset = false;
 
 	// check for all group names
@@ -341,6 +341,8 @@ function processVehicles(vehicles, group) {
 	else {
 		crewSeats = 0;
 	}
+
+	// set the motorpool data for the crew counts
 
 	// iterate through vehicles
 	for (let i = 0; i < vehicles.length; i++) {
@@ -364,7 +366,11 @@ function processVehicles(vehicles, group) {
 			// calculate the correct passenger and crew counts
 			const totalSeats = Number(data[2]) + Number(data[3]);
 			const passengerSeats = totalSeats - crewSeats;
-
+			let vehicleId = vehicles[i].id;
+			let motorpoolMapArr = motorpoolMap.get(vehicleId);
+			motorpoolMapArr[2] = crewSeats;
+			motorpoolMapArr[3] = passengerSeats;
+			motorpoolMap.set(vehicles[i].id, motorpoolMapArr);
 			// create all the elements for the row of the grid for the vehicle
 
 			// create type node, set attributes
@@ -511,7 +517,7 @@ function deductFromVehicleCount(vehicleId) {
 	const vehicleCounter = document.getElementById(`${vehicleId}VehicleCount`);
 	let count = Number(vehicleCounter.innerText);
 
-	// increment the counter by 1
+	// decrements  the counter by 1
 	count--;
 
 	// keep count from being negative (this breaks the code)
