@@ -262,7 +262,7 @@ function variants(faction) {
 async function generateContent(variant) {
 	// get content node
 	const contentNode = document.getElementById("content");
-
+		contentNode.replaceChildren([]);
 	// reset airElements array
 	airElementsArray = new Array();
 
