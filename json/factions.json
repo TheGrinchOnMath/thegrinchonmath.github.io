@@ -1316,7 +1316,7 @@
                                     "cargo": 4
                                 }
                             ],
-                            "group": "Anti-Air"
+                            "group": "SPAA"
                         },
                         {
                             "vehicles": [
@@ -1482,7 +1482,7 @@
                                     "cargo": 4
                                 }
                             ],
-                            "group": "Anti-Air"
+                            "group": "SPAA"
                         },
                         {
                             "vehicles": [
