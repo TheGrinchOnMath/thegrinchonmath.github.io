@@ -751,5 +751,38 @@ function removeDuplicates(arr) {
     return arr.filter((item,
         index) => arr.indexOf(item) === index);
 }
+
+async function find_turret_ids(path) {
+	let arr = new Array();
+	const factionArr = await parseJson(path);
+	for (const side in factionArr) {
+		const sideArr = factionArr[side];
+		for (const index in sideArr) {
+			const faction = sideArr[index];
+			for (const index_2 in faction.variants) {
+				const variant = faction.variants[index_2];
+				const motorpool = variant.motorpool;
+				for (const index_3 in motorpool) {
+					const group = motorpool[index_3];
+					if (group.group === "Turrets") {
+						const vehicles = group.vehicles;
+						for (const index_3 in vehicles) {
+							const vehicle = vehicles[index_3];
+							if (!arr.includes(vehicle.id)) {
+								arr.push(vehicle.id)
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+	console.log(arr);
+}
+
+
+find_turret_ids("/json/factions.json")
+
 //----------call functions----------//
 parse("/json/factions.json", "/json/motorpool.json");
