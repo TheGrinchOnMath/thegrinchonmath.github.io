@@ -1422,24 +1422,16 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "rhsusf_M977A4_AMMO_BKIT_usarmy_d",
+                                    "id": "B_Truck_01_ammo_F",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "rhsusf_M978A4_BKIT_usarmy_d",
+                                    "id": "B_Truck_01_fuel_F",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "rhsusf_M1083A1P2_B_D_fmtv_usarmy",
+                                    "id": "B_Truck_01_transport_F",
                                     "cargo": 12
-                                },
-                                {
-                                    "id": "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "rhsusf_m1152_rsv_usarmy_d",
-                                    "cargo": 4
                                 },
                                 {
                                     "id": "rhsusf_m1151_usarmy_d",
@@ -1451,15 +1443,7 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "rhsusf_m1151_m2_v2_usarmy_d",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m1240a1_m2_uik_usarmy_d",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_M1230_M2_usarmy_d",
+                                    "id": "rhsusf_m1151_m2_v1_usarmy_d",
                                     "cargo": 4
                                 }
                             ],
@@ -1468,19 +1452,11 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "rhsusf_stryker_m1132_m2_d",
-                                    "cargo": 6
+                                    "id": "B_APC_Tracked_01_rcws_F",
+                                    "cargo": 4
                                 },
                                 {
-                                    "id": "rhsusf_stryker_m1126_m2_d",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "rhsusf_stryker_m1126_mk19_d",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "rhsusf_stryker_m1134_d",
+                                    "id": "B_APC_Tracked_01_CRV_F",
                                     "cargo": 6
                                 }
                             ],
@@ -1489,20 +1465,11 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "RHS_M2A3_BUSKIII",
+                                    "id": "B_MBT_01_TUSK_F",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "RHS_M6",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_m1a2sep1tuskiid_usarmy",
+                                    "id": "B_MBT_01_cannon_F",
                                     "cargo": 4
                                 }
                             ],
@@ -1511,11 +1478,20 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "rhsusf_m109d_usarmy",
+                                    "id": "B_APC_Tracked_01_AA_F",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Anti-Air"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_MBT_01_mlrs_F",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "rhsusf_M142_usarmy_D",
+                                    "id": "B_MBT_01_arty_F",
                                     "cargo": 4
                                 }
                             ],
@@ -1524,19 +1500,11 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "RHS_MELB_MH6M",
-                                    "cargo": 4
-                                },
-                                {
                                     "id": "RHS_UH60M_d",
                                     "cargo": 6
                                 },
                                 {
-                                    "id": "RHS_CH_47F_10",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "RHS_CH_47F_10_cargo",
+                                    "id": "rhsusf_CH53E_USMC_D",
                                     "cargo": 8
                                 }
                             ],
@@ -1544,10 +1512,6 @@
                         },
                         {
                             "vehicles": [
-                                {
-                                    "id": "RHS_MELB_AH6M",
-                                    "cargo": 0
-                                },
                                 {
                                     "id": "RHS_UH60M_ESSS_d",
                                     "cargo": 4
@@ -1568,10 +1532,6 @@
                                 {
                                     "id": "USAF_C130J_Cargo",
                                     "cargo": 24
-                                },
-                                {
-                                    "id": "USAF_C17",
-                                    "cargo": 40
                                 }
                             ],
                             "group": "Fixed Wing Transport"
@@ -1579,15 +1539,7 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "USAF_MQ9",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "USAF_A10",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "USAF_F22_Heavy",
+                                    "id": "USAF_F35A",
                                     "cargo": -1
                                 }
                             ],
@@ -1595,10 +1547,6 @@
                         },
                         {
                             "vehicles": [
-                                {
-                                    "id": "rhsusf_mkvsoc",
-                                    "cargo": 12
-                                },
                                 {
                                     "id": "UK3CB_BAF_RHIB_HMG",
                                     "cargo": 8
@@ -5458,7 +5406,7 @@
                                     "cargo": 4
                                 }
                             ],
-                            "group": "SPAA"
+                            "group": "SPA"
                         },
                         {
                             "vehicles": [
