@@ -315,121 +315,6 @@
                                 {
                                     "id": "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_A_MTP",
                                     "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_Chinook_HC2_MTP",
-                                    "cargo": 16
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_RHIB_GPMG_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_RHIB_HMG_MTP",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boats"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "C_Quadbike_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Container_Sand",
-                                    "cargo": 30
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Container_Green",
-                                    "cargo": 30
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Army",
-                    "era": "Early"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Soft_FFR_Sand_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Soft_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Transport_Sand_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Transport_Green_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Cargo_Sand_A_MTP",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Cargo_Green_A_MTP",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Fuel_Sand_MTP",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Fuel_Green_MTP",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Amb_FFR_Sand_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Sand_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_A_MTP",
-                                    "cargo": 4
                                 },
                                 {
                                     "id": "UK3CB_BAF_Jackal2_L2A1_D_MTP",
@@ -581,171 +466,6 @@
                         }
                     ],
                     "name": "Army",
-                    "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Soft_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Transport_Green_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Cargo_Green_A_MTP",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Fuel_Green_MTP",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_A_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Jackal2_L2A1_W_MTP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Coyote_Passenger_L111A1_W_MTP",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Husky_Passenger_HMG_Green_MTP",
-                                    "cargo": 2
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_FV432_Mk3_RWS_Green_MTP",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_Warrior_A3_W_Cage_MTP",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_Merlin_HC3_32_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Chinook_HC2_MTP",
-                                    "cargo": 16
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_BAF_Wildcat_AH1_HEL_8A_MTP",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Wildcat_AH1_CAS_6A_MTP",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_BAF_Apache_AH1_Generic_MTP",
-                                    "cargo": 0
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "USAF_C17",
-                                    "cargo": 100
-                                }
-                            ],
-                            "group": "Fixed Wing Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "USAF_F35A",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "USAF_F35A_STEALTH",
-                                    "cargo": 0
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "USAF_MQ9",
-                                    "cargo": 0
-                                }
-                            ],
-                            "group": "Fixed Wing Drone"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_RHIB_GPMG_MTP",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_BAF_RHIB_HMG_MTP",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boats"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "C_Quadbike_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_BAF_MAN_HX58_Container_Green",
-                                    "cargo": 30
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Army(W)",
                     "era": "Modern"
                 },
                 {
@@ -1011,77 +731,6 @@
                     ],
                     "name": "CounterTerror",
                     "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "C_Van_01_box_F",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "C_Van_02_vehicle_F",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "C_Van_02_transport_F",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_Civ_LandRover_Hard_Red_A",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "C_Offroad_01_covered_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_ION_B_Desert_Transit_Medevac",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_ION_B_Urban_LR_M2",
-                                    "cargo": 2
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHS_MELB_MH6M",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Boats"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "C_Quadbike_01_F",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "CounterTerror",
-                    "era": "Early"
                 }
             ],
             "name": "British Armed Forces"
@@ -1595,155 +1244,6 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_B_M939_Reammo_WDL",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_B_M939_Closed_WDL",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_B_M939_Refuel_WDL",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "UK3CB_B_M939_Recovery_WDL",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CW_US_B_LATE_M151_JEEP_CLOSED",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_M1117_W",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m1045_w_s",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_m113_usarmy",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "rhsusf_CGRCAT1A2_M2_usmc_wd",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_LAV25_US_WDL",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_G_UH1H_FIA",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "LOP_SLA_Mi8MT_Cargo",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_G_UH1H_GUNSHIP_FIA",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHSGREF_A29B_HIDF",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "rhsgref_hidf_rhib",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHS_M2StaticMG_MiniTripod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_M2StaticMG_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_TOW_TriPod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_MK19_TriPod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_M119_D",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_M1030_USMC_WDL",
-                                    "cargo": 2
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Army",
-                    "era": "Modern"
-                }
-            ],
-            "name": "Colombian Armed Forces"
-        },
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
                                     "id": "UK3CB_I_LandRover_Closed_CDF",
                                     "cargo": 4
                                 },
@@ -1816,7 +1316,7 @@
                                     "cargo": 4
                                 }
                             ],
-                            "group": "Anti-Air"
+                            "group": "SPAA"
                         },
                         {
                             "vehicles": [
@@ -1922,314 +1422,6 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "rnt_lkw_5t_mil_gl_kat_i_transport_fleck",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "rnt_lkw_7t_mil_gl_kat_i_mun_fleck",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rnt_lkw_5t_mil_gl_kat_i_fuel_fleck",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_San",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m998_w_2dr_fulltop",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m1025_w",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_m1025_w_m2",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m1045_w",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_m113_usarmy",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m113_usarmy_medical",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_M1117_W",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "Redd_Marder_1A5_Flecktarn",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_B_G_BMP1",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "BWA3_Leopard2_Fleck",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsgref_cdf_b_ural_Zu23",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_M270_MLRS_HE_WDL",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_B_M270_MLRS_Cluster_WDL",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "BWA3_Panzerhaubitze2000_Fleck",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Artillery"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_RHIB",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHS_UH60M_d",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "BWA3_NH90_TTH_M3M_Fleck",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "RHS_CH_47F_10",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHS_AH64D",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "USAF_C130J",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "USAF_C130J_Cargo",
-                                    "cargo": 12
-                                }
-                            ],
-                            "group": "Fixed Wing Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "USAF_F35A",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "USAF_MQ9",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_KRG_B_Quadbike",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_mrzr4_d",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Misc."
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "RHS_M2StaticMG_MiniTripod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_M2StaticMG_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_TOW_TriPod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_MK19_TriPod_D",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_M119_D",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        }
-                    ],
-                    "name": "Army(WD)",
-                    "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_APD_B_Transit_Cargo",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Transit_Medevac",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_SUV_POL",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Octavia_Pol",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Offroad_Covered",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Offroad_Covered_EKAM",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Offroad_Comms_EKAM",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_APD_B_Offroad_HMG_EKAM",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_Caiman_Police",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_APD_B_Motorboat_Police",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_APD_B_Bell412_FLIR",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_MH9_Benches",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_APD_B_Quadbike",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_APD_B_YAVA",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Police",
-                    "era": "Modern"
-                }
-            ],
-            "name": "Hellenic Armed Forces"
-        },
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
                                     "id": "B_Truck_01_ammo_F",
                                     "cargo": 4
                                 },
@@ -2290,7 +1482,7 @@
                                     "cargo": 4
                                 }
                             ],
-                            "group": "Anti-Air"
+                            "group": "SPAA"
                         },
                         {
                             "vehicles": [
@@ -4565,353 +3757,6 @@
                 }
             ],
             "name": "United States Military"
-        }
-    ],
-    "opfor": [
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Ural",
-                                    "cargo": 10
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Ural_Ammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Ural_Fuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_UAZ_Closed",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Tigr_FFV",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Tigr_STS",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_BMP3MERA",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_T80UK",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Ural_Zu23",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_2S1",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_BM21",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_MAZ_543_SCUD",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPG"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Rubber_Rhib",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Skiff",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Orca",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Mi8AMT",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_Orca_Armed_MULTI",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_G_O_MIG29SM",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_vmf",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_AGS30_TriPod_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_D30_vmf",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_G_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "rhs_pts_vmf",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Army(WD)",
-                    "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Ural",
-                                    "cargo": 10
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Ural_Ammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Ural_Fuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_UAZ_Closed",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Tigr_FFV",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Tigr_STS",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_BMP3MERA",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_T80UK",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Ural_Zu23",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_2S1",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_BM21",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_MAZ_543_SCUD",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPG"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Rubber_Rhib",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Skiff",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Orca",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Mi8AMT",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_Orca_Armed_MULTI",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CSAT_N_O_MIG29SM",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_vmf",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_AGS30_TriPod_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_VMF",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_D30_vmf",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_G_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "rhs_pts_vmf",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Marine(WD)",
-                    "era": "Modern"
-                }
-            ],
-            "name": "People's Liberation Army"
         },
         {
             "variants": [
@@ -4920,23 +3765,23 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_MEI_O_V3S_Reammo",
+                                    "id": "UK3CB_B_M939_Reammo_WDL",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_MEI_O_V3S_Closed",
+                                    "id": "UK3CB_B_M939_Closed_WDL",
                                     "cargo": 8
                                 },
                                 {
-                                    "id": "UK3CB_MEI_O_V3S_Refuel",
+                                    "id": "UK3CB_B_M939_Refuel_WDL",
                                     "cargo": 0
                                 },
                                 {
-                                    "id": "UK3CB_MEI_O_V3S_Recovery",
+                                    "id": "UK3CB_B_M939_Recovery_WDL",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_MEI_O_Datsun_Civ_Closed",
+                                    "id": "UK3CB_CW_US_B_LATE_M151_JEEP_CLOSED",
                                     "cargo": 4
                                 }
                             ],
@@ -4945,15 +3790,11 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_MEI_O_Datsun_Pkm",
+                                    "id": "rhsusf_M1117_W",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_MEI_O_Hilux_Spg9",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEI_O_Hilux_BTR",
+                                    "id": "rhsusf_m1045_w_s",
                                     "cargo": 4
                                 }
                             ],
@@ -4962,7 +3803,33 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_C_Bell412_Civ",
+                                    "id": "rhsusf_m113_usarmy",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "rhsusf_CGRCAT1A2_M2_usmc_wd",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_B_LAV25_US_WDL",
+                                    "cargo": 6
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_B_G_UH1H_FIA",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "LOP_SLA_Mi8MT_Cargo",
                                     "cargo": 8
                                 }
                             ],
@@ -4971,11 +3838,20 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_C_Cessna_172",
-                                    "cargo": 4
+                                    "id": "UK3CB_B_G_UH1H_GUNSHIP_FIA",
+                                    "cargo": 6
                                 }
                             ],
-                            "group": "Fixed Wing Recon"
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "RHSGREF_A29B_HIDF",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
                         },
                         {
                             "vehicles": [
@@ -4993,15 +3869,23 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "RHS_KORD_MSV",
+                                    "id": "RHS_M2StaticMG_MiniTripod_D",
                                     "cargo": -1
                                 },
                                 {
-                                    "id": "RHS_KORD_high_MSV",
+                                    "id": "RHS_M2StaticMG_D",
                                     "cargo": -1
                                 },
                                 {
-                                    "id": "RHS_AGS30_TriPod_MSV",
+                                    "id": "RHS_TOW_TriPod_D",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_MK19_TriPod_D",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_M119_D",
                                     "cargo": -1
                                 }
                             ],
@@ -5017,12 +3901,14 @@
                             "group": "Misc."
                         }
                     ],
-                    "name": "Rebels",
+                    "name": "Army",
                     "era": "Modern"
                 }
             ],
-            "name": "Revolutionary Armed Forces of Colombia"
-        },
+            "name": "Colombian Armed Forces"
+        }
+    ],
+    "opfor": [
         {
             "variants": [
                 {
@@ -6105,37 +4991,30 @@
                     ],
                     "name": "Spetsnaz(WD)",
                     "era": "Modern"
-                },
+                }
+            ],
+            "name": "Russian Armed Forces"
+        },
+        {
+            "variants": [
                 {
                     "motorpool": [
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_KDF_O_Ural",
-                                    "cargo": 12
+                                    "id": "UK3CB_CSAT_G_O_Ural",
+                                    "cargo": 10
                                 },
                                 {
-                                    "id": "UK3CB_KDF_O_Ural_Ammo",
+                                    "id": "UK3CB_CSAT_G_O_Ural_Ammo",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_KDF_O_Ural_Fuel",
+                                    "id": "UK3CB_CSAT_G_O_Ural_Fuel",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_CPD_O_Lada",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CPD_O_Hilux_Closed",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CPD_O_S1203",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CHC_O_S1203_Amb",
+                                    "id": "UK3CB_CSAT_G_O_UAZ_Closed",
                                     "cargo": 4
                                 }
                             ],
@@ -6144,11 +5023,11 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_CPD_O_TIGR_FFV",
+                                    "id": "UK3CB_CSAT_G_O_Tigr_FFV",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_CPD_O_Hilux_Dshkm",
+                                    "id": "UK3CB_CSAT_G_O_Tigr_STS",
                                     "cargo": 4
                                 }
                             ],
@@ -6157,8 +5036,56 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 6
+                                    "id": "UK3CB_CSAT_G_O_BMP3MERA",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_G_O_T80UK",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "MBT"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_G_O_Ural_Zu23",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPAA"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_G_O_2S1",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_G_O_BM21",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_G_O_MAZ_543_SCUD",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPG"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_G_O_Rubber_Rhib",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_G_O_Skiff",
+                                    "cargo": 8
                                 }
                             ],
                             "group": "Boat"
@@ -6166,8 +5093,12 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_CPD_O_Mi8AMT",
-                                    "cargo": 4
+                                    "id": "UK3CB_CSAT_G_O_Orca",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_G_O_Mi8AMT",
+                                    "cargo": 8
                                 }
                             ],
                             "group": "Rotary Transport"
@@ -6175,18 +5106,239 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_CPD_O_YAVA",
+                                    "id": "UK3CB_CSAT_G_O_Orca_Armed_MULTI",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_G_O_MIG29SM",
                                     "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_vmf",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_AGS30_TriPod_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_D30_vmf",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "rhs_pts_vmf",
+                                    "cargo": 6
                                 }
                             ],
                             "group": "Misc."
                         }
                     ],
-                    "name": "Police",
+                    "name": "Army(WD)",
+                    "era": "Modern"
+                },
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Ural",
+                                    "cargo": 10
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Ural_Ammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Ural_Fuel",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_UAZ_Closed",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Tigr_FFV",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Tigr_STS",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_BMP3MERA",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_T80UK",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "MBT"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Ural_Zu23",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPAA"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_2S1",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_BM21",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_MAZ_543_SCUD",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPG"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Rubber_Rhib",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Skiff",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Orca",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Mi8AMT",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_Orca_Armed_MULTI",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CSAT_N_O_MIG29SM",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_vmf",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_AGS30_TriPod_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_VMF",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_D30_vmf",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "rhs_pts_vmf",
+                                    "cargo": 6
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "Marine(WD)",
                     "era": "Modern"
                 }
             ],
-            "name": "Russian Armed Forces"
+            "name": "People's Liberation Army"
         },
         {
             "variants": [
@@ -6350,9 +5502,7 @@
                 }
             ],
             "name": "Venezuelan Armed Forces"
-        }
-    ],
-    "indep": [
+        },
         {
             "variants": [
                 {
@@ -6360,27 +5510,23 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "UK3CB_B_MTVR_Reammo_USMC_WDL",
+                                    "id": "UK3CB_MEI_O_V3S_Reammo",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_B_MTVR_Closed_USMC_WDL",
+                                    "id": "UK3CB_MEI_O_V3S_Closed",
                                     "cargo": 8
                                 },
                                 {
-                                    "id": "UK3CB_B_MTVR_Refuel_USMC_WDL",
+                                    "id": "UK3CB_MEI_O_V3S_Refuel",
                                     "cargo": 0
                                 },
                                 {
-                                    "id": "UK3CB_B_MTVR_Recovery_USMC_WDL",
+                                    "id": "UK3CB_MEI_O_V3S_Recovery",
                                     "cargo": 4
                                 },
                                 {
-                                    "id": "UK3CB_AAF_B_SUV_Armoured",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "C_Offroad_02_unarmed_F",
+                                    "id": "UK3CB_MEI_O_Datsun_Civ_Closed",
                                     "cargo": 4
                                 }
                             ],
@@ -6399,10 +5545,6 @@
                                 {
                                     "id": "UK3CB_MEI_O_Hilux_BTR",
                                     "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_AAF_B_SUV_Armed",
-                                    "cargo": 8
                                 }
                             ],
                             "group": "Armed Car/MRAP"
@@ -6415,15 +5557,6 @@
                                 }
                             ],
                             "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_B_UH1H_GUNSHIP_CDF",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Attack"
                         },
                         {
                             "vehicles": [
@@ -6450,417 +5583,16 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "RHS_M2StaticMG_MiniTripod_D",
+                                    "id": "RHS_KORD_MSV",
                                     "cargo": -1
                                 },
                                 {
-                                    "id": "RHS_M2StaticMG_D",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhsusf_mrzr4_d",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_C_TT650",
-                                    "cargo": 2
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Criminal",
-                    "era": "Modern"
-                }
-            ],
-            "name": "Cartel De Sinaloa"
-        },
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_B_Kamaz_Closed",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "UK3CB_TKA_B_Kamaz_Ammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_B_Kamaz_Fuel",
-                                    "cargo": 0
-                                },
-                                {
-                                    "id": "LOP_IRAN_UAZ_Open",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "LOP_IRAN_UAZ",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_UAZ_SPG",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "LOP_IRAN_UAZ_DshKM",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_M113_C",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "LOP_IRAN_BTR70",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_BMP1",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "LOP_IRAN_BMP2",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_T72BA",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_ZSU234",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_2S1",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "LOP_IRAN_BM21",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPG"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsgref_hidf_rhib",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_CH47F",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "LOP_IRAN_UH1Y_UN",
-                                    "cargo": 6
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "LOP_IRAN_AH1Z_WD",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_GAF_I_MIG21_AA",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_msv",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_D30_msv",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_G_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_O_G_YAVA",
-                                    "cargo": 2
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "IranianArmy",
-                    "era": "Modern"
-                }
-            ],
-            "name": "Islamic Republic of Iran"
-        },
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Transport_Closed",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Reammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Refuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_GAZ_Vodnik_MedEvac",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_UAZ_Open",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_GAZ_Vodnik_PKT",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_UAZ_MG",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_UAZ_SPG9",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_BTR80a",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BTR80",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BRDM2_ATGM",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BRDM2",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_BMP2K",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BMP1",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_T72BM",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_ZsuTank",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_SCUD",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Artillery"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_RHIB",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Mi8",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Mi8AMTSh",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Mi_24G",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_C47_Late",
-                                    "cargo": 12
-                                }
-                            ],
-                            "group": "Fixed Wing Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_AC47",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Su25SM_CAS",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_L39_CAS",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_msv",
+                                    "id": "RHS_KORD_high_MSV",
                                     "cargo": -1
                                 },
                                 {
                                     "id": "RHS_AGS30_TriPod_MSV",
                                     "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "UK3CB_UN_I_D30",
-                                    "cargo": -1
                                 }
                             ],
                             "group": "Turrets"
@@ -6868,501 +5600,21 @@
                         {
                             "vehicles": [
                                 {
-                                    "id": "B_G_Quadbike_01_F",
+                                    "id": "UK3CB_B_M1030_USMC_WDL",
                                     "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_O_G_YAVA",
-                                    "cargo": -1
                                 }
                             ],
                             "group": "Misc."
                         }
                     ],
-                    "name": "Army(D)",
-                    "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Transport_Closed",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Reammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_Refuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Hilux_Ambulance",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Hilux_Closed",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Tigr_FFV",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Tigr_STS",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Hilux_Pkm",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Hilux_Spg9",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_MTLB_BMP",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MTLB_Cannon",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_MTLB_AMB",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_BMP2K",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BMP1",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "IFV"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Hilux_Zu23_Front",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "SPAA"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_MAZ_543_SCUD",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Artillery"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_RHIB",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Mi8",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Mi_24G",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Rotary Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_C47_Late",
-                                    "cargo": 12
-                                }
-                            ],
-                            "group": "Fixed Wing Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_AC47",
-                                    "cargo": 6
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Su25SM_CAS",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_L39_CAS",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_msv",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_AGS30_TriPod_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "UK3CB_UN_I_D30",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_G_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_O_G_YAVA",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "SFG(D)",
-                    "era": "Modern"
-                },
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Ural_Open",
-                                    "cargo": 12
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Ural_Ammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_Ural_Fuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKP_O_LandRover_Open",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKP_B_Lada_Police",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEC_O_Van_Transit_Medevac",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKP_O_LandRover_M2",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BTR40",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_BTR40_MG",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_BRDM2",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_Boat_Transport_01_F",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKA_O_RHIB",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Boat"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_UH1H_M240",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKA_O_Cessna_T41_Armed",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Fixed Wing Attack"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "rhs_Kornet_9M133_2_msv",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "RHS_AGS30_TriPod_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_high_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_KORD_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "rhs_SPG9M_MSV",
-                                    "cargo": -1
-                                },
-                                {
-                                    "id": "UK3CB_UN_I_D30",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Turrets"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "B_G_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_TKP_O_YAVA",
-                                    "cargo": -1
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Police(D)",
+                    "name": "Rebels",
                     "era": "Modern"
                 }
             ],
-            "name": "Takistan Armed Forces"
-        },
-        {
-            "variants": [
-                {
-                    "motorpool": [
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKC_C_V3S_Refuel",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_V3S_Repair",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_V3S_Reammo",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_V3S_Open",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_V3S_Closed",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_UAZ_Open",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEE_O_M998_4DR",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEE_O_M998_2DR",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEE_O_M1025_Unarmed",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_CW_US_B_EARLY_M113_AMB",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Utility"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_MEE_O_M1025_M2",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEE_O_M1025_TOW",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_M1232_M2_usarmy_d",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "Armed Car/MRAP"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_MEE_O_MTLB_KPVT",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "UK3CB_MEE_O_BTR60",
-                                    "cargo": 4
-                                },
-                                {
-                                    "id": "rhsusf_m113d_usarmy",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "APC"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_MEE_O_T55",
-                                    "cargo": 4
-                                }
-                            ],
-                            "group": "MBT"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_CW_US_B_LATE_UH60M2",
-                                    "cargo": 8
-                                }
-                            ],
-                            "group": "Rotary Transport"
-                        },
-                        {
-                            "vehicles": [
-                                {
-                                    "id": "UK3CB_TKC_C_UAZ_Open",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_Pickup",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_LR_Open",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_Ikarus",
-                                    "cargo": 8
-                                },
-                                {
-                                    "id": "UK3CB_TKC_C_Hatchback",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "C_Quadbike_01_F",
-                                    "cargo": 2
-                                },
-                                {
-                                    "id": "UK3CB_C_TT650",
-                                    "cargo": 1
-                                },
-                                {
-                                    "id": "UK3CB_C_YAVA",
-                                    "cargo": 1
-                                }
-                            ],
-                            "group": "Misc."
-                        }
-                    ],
-                    "name": "Taliban2020s",
-                    "era": "Insurgency"
-                }
-            ],
-            "name": "Taliban"
-        },
+            "name": "Revolutionary Armed Forces of Colombia"
+        }
+    ],
+    "indep": [
         {
             "variants": [
                 {
@@ -8096,6 +6348,1012 @@
                 }
             ],
             "name": "Ukrainian Armed Forces"
+        },
+        {
+            "variants": [
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Transport_Closed",
+                                    "cargo": 12
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Reammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Refuel",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_GAZ_Vodnik_MedEvac",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_UAZ_Open",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_GAZ_Vodnik_PKT",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_UAZ_MG",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_UAZ_SPG9",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_BTR80a",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BTR80",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BRDM2_ATGM",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BRDM2",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_BMP2K",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BMP1",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_T72BM",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "MBT"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_ZsuTank",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPAA"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_SCUD",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Artillery"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_RHIB",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Mi8",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Mi8AMTSh",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Mi_24G",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_C47_Late",
+                                    "cargo": 12
+                                }
+                            ],
+                            "group": "Fixed Wing Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_AC47",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Su25SM_CAS",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_L39_CAS",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_msv",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_AGS30_TriPod_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "UK3CB_UN_I_D30",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_O_G_YAVA",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "Army(D)",
+                    "era": "Modern"
+                },
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Transport_Closed",
+                                    "cargo": 12
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Reammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_Refuel",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Hilux_Ambulance",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Hilux_Closed",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Tigr_FFV",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Tigr_STS",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Hilux_Pkm",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Hilux_Spg9",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_MTLB_BMP",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MTLB_Cannon",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_MTLB_AMB",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_BMP2K",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BMP1",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Hilux_Zu23_Front",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPAA"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_MAZ_543_SCUD",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Artillery"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_RHIB",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Mi8",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Mi_24G",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_C47_Late",
+                                    "cargo": 12
+                                }
+                            ],
+                            "group": "Fixed Wing Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_AC47",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Su25SM_CAS",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_L39_CAS",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_msv",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_AGS30_TriPod_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "UK3CB_UN_I_D30",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_O_G_YAVA",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "SFG(D)",
+                    "era": "Modern"
+                },
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Ural_Open",
+                                    "cargo": 12
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Ural_Ammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_Ural_Fuel",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKP_O_LandRover_Open",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEC_O_Van_Transit_Medevac",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKP_O_LandRover_M2",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BTR40",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_BTR40_MG",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_BRDM2",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_O_RHIB",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_UH1H_M240",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_O_Cessna_T41_Armed",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_msv",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_AGS30_TriPod_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "UK3CB_UN_I_D30",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_TKP_O_YAVA",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "Police(D)",
+                    "era": "Modern"
+                }
+            ],
+            "name": "Takistan Armed Forces"
+        },
+        {
+            "variants": [
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKC_C_V3S_Refuel",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_V3S_Repair",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_V3S_Reammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_V3S_Open",
+                                    "cargo": 8
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_V3S_Closed",
+                                    "cargo": 8
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_UAZ_Open",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEE_O_M998_4DR",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEE_O_M998_2DR",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEE_O_M1025_Unarmed",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_CW_US_B_EARLY_M113_AMB",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_MEE_O_M1025_M2",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEE_O_M1025_TOW",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "rhsusf_M1232_M2_usarmy_d",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_MEE_O_MTLB_KPVT",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEE_O_BTR60",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "rhsusf_m113d_usarmy",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_MEE_O_T55",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "MBT"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_CW_US_B_LATE_UH60M2",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKC_C_UAZ_Open",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_Pickup",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_LR_Open",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_Ikarus",
+                                    "cargo": 8
+                                },
+                                {
+                                    "id": "UK3CB_TKC_C_Hatchback",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "C_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_C_TT650",
+                                    "cargo": 1
+                                },
+                                {
+                                    "id": "UK3CB_C_YAVA",
+                                    "cargo": 1
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "Taliban2020s",
+                    "era": "Insurgency"
+                }
+            ],
+            "name": "Taliban"
+        },
+        {
+            "variants": [
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_B_MTVR_Reammo_USMC_WDL",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_B_MTVR_Closed_USMC_WDL",
+                                    "cargo": 8
+                                },
+                                {
+                                    "id": "UK3CB_B_MTVR_Refuel_USMC_WDL",
+                                    "cargo": 0
+                                },
+                                {
+                                    "id": "UK3CB_B_MTVR_Recovery_USMC_WDL",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_AAF_B_SUV_Armoured",
+                                    "cargo": 8
+                                },
+                                {
+                                    "id": "C_Offroad_02_unarmed_F",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_MEI_O_Datsun_Pkm",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEI_O_Hilux_Spg9",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_MEI_O_Hilux_BTR",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_AAF_B_SUV_Armed",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_C_Bell412_Civ",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_B_UH1H_GUNSHIP_CDF",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_C_Cessna_172",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Fixed Wing Recon"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "rhsgref_hidf_rhib",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "RHS_M2StaticMG_MiniTripod_D",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "RHS_M2StaticMG_D",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhsusf_mrzr4_d",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_C_TT650",
+                                    "cargo": 2
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "Criminal",
+                    "era": "Modern"
+                }
+            ],
+            "name": "Cartel De Sinaloa"
+        },
+        {
+            "variants": [
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_TKA_B_Kamaz_Closed",
+                                    "cargo": 12
+                                },
+                                {
+                                    "id": "UK3CB_TKA_B_Kamaz_Ammo",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "UK3CB_TKA_B_Kamaz_Fuel",
+                                    "cargo": 0
+                                },
+                                {
+                                    "id": "LOP_IRAN_UAZ_Open",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "LOP_IRAN_UAZ",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_UAZ_SPG",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "LOP_IRAN_UAZ_DshKM",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Armed Car/MRAP"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_M113_C",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "LOP_IRAN_BTR70",
+                                    "cargo": 6
+                                }
+                            ],
+                            "group": "APC"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_BMP1",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "LOP_IRAN_BMP2",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "IFV"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_T72BA",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "MBT"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_ZSU234",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPAA"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_2S1",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "LOP_IRAN_BM21",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "SPG"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 4
+                                },
+                                {
+                                    "id": "rhsgref_hidf_rhib",
+                                    "cargo": 8
+                                }
+                            ],
+                            "group": "Boat"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_CH47F",
+                                    "cargo": 12
+                                },
+                                {
+                                    "id": "LOP_IRAN_UH1Y_UN",
+                                    "cargo": 6
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "LOP_IRAN_AH1Z_WD",
+                                    "cargo": 4
+                                }
+                            ],
+                            "group": "Rotary Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "UK3CB_GAF_I_MIG21_AA",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Fixed Wing Attack"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "rhs_Kornet_9M133_2_msv",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_high_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_KORD_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_SPG9M_MSV",
+                                    "cargo": -1
+                                },
+                                {
+                                    "id": "rhs_D30_msv",
+                                    "cargo": -1
+                                }
+                            ],
+                            "group": "Turrets"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_G_Quadbike_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_O_G_YAVA",
+                                    "cargo": 2
+                                }
+                            ],
+                            "group": "Misc."
+                        }
+                    ],
+                    "name": "IranianArmy",
+                    "era": "Modern"
+                }
+            ],
+            "name": "Islamic Republic of Iran"
         }
     ]
 }
