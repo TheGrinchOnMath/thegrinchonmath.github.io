@@ -1093,6 +1093,81 @@
                         {
                             "vehicles": [
                                 {
+                                    "id": "C_Van_01_box_F",
+                                    "cargo": 13
+                                },
+                                {
+                                    "id": "C_Van_02_vehicle_F",
+                                    "cargo": 13
+                                }
+                            ],
+                            "group": "Cargo Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "C_Van_02_vehicle_F",
+                                    "cargo": 5
+                                },
+                                {
+                                    "id": "UK3CB_ADC_C_SUV_Armoured",
+                                    "cargo": 3
+                                },
+                                {
+                                    "id": "C_SUV_01_F",
+                                    "cargo": 3
+                                },
+                                {
+                                    "id": "B_GEN_Offroad_01_gen_F",
+                                    "cargo": 3
+                                }
+                            ],
+                            "group": "Troop Utility"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "EC-135 PLACEHOLDER",
+                                    "cargo": 12
+                                }
+                            ],
+                            "group": "Rotary Transport"
+                        },
+                        {
+                            "vehicles": [
+                                {
+                                    "id": "B_Boat_Transport_01_F",
+                                    "cargo": 2
+                                },
+                                {
+                                    "id": "UK3CB_TKA_B_RHIB",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "rhsgref_hidf_rhib",
+                                    "cargo": 6
+                                },
+                                {
+                                    "id": "rhsgref_hidf_canoe",
+                                    "cargo": 1
+                                }
+                            ],
+                            "group": "Boats"
+                        }
+                    ],
+                    "name": "GSG9",
+                    "era": "Modern"
+                }
+            ],
+            "name": "Bundespolizei"
+        },
+        {
+            "variants": [
+                {
+                    "motorpool": [
+                        {
+                            "vehicles": [
+                                {
                                     "id": "rnt_lkw_7t_mil_gl_kat_i_mun_trope",
                                     "cargo": 12
                                 },
