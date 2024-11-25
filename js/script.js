@@ -338,7 +338,9 @@ function processVehicles(vehicles, group) {
 		idArray.push(vehicles[i].id.toLowerCase());
 
 		if (data == undefined) {
-			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
+			// detect if missing data. currently there is no data for turrets.
+			// uncomment to get data
+			// console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
 		} else {
 
 			if (airAsset && twoSeaterHelis.includes(vehicles[i].id)) {
