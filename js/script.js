@@ -326,7 +326,6 @@ function processVehicles(vehicles, group) {
 	}
 	// the not speshal vehicles do not need a dedicated crew so no need to calculate
 	else {
-		console.log("unknown group: " + group.group)
 		crewSeats = 0;
 	}
 
@@ -341,7 +340,7 @@ function processVehicles(vehicles, group) {
 		if (data == undefined) {
 			// detect if missing data. currently there is no data for turrets.
 			// uncomment to get data
-			// console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
+			console.log(`there is no data in motorpoolMap for id:${vehicles[i].id}`);
 		} else {
 
 			if (airAsset && twoSeaterHelis.includes(vehicles[i].id)) {
