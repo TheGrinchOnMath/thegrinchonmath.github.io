@@ -329,7 +329,7 @@
                                     "cargo": 13
                                 }
                             ],
-                            "group": "Cargo Utility"
+                            "group": "Utility"
                         },
                         {
                             "vehicles": [
@@ -350,7 +350,7 @@
                                     "cargo": 3
                                 }
                             ],
-                            "group": "Troop Utility"
+                            "group": "Utility"
                         },
                         {
                             "vehicles": [
@@ -380,7 +380,7 @@
                                     "cargo": 1
                                 }
                             ],
-                            "group": "Boats"
+                            "group": "Misc."
                         }
                     ],
                     "name": "GSG9",

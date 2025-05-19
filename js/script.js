@@ -326,6 +326,7 @@ function processVehicles(vehicles, group) {
 	}
 	// the not speshal vehicles do not need a dedicated crew so no need to calculate
 	else {
+		console.log("unknown group: " + group.group)
 		crewSeats = 0;
 	}
 
