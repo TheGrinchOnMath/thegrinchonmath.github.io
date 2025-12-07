@@ -275,3 +275,15 @@ input {
 	border-radius: 6px;
     margin-bottom: 1em;
 }
+
+div.head {
+    display:flex;
+    flex-direction:row;
+    padding-top:1%;
+}
+
+button#information {
+    border-color: #383838;
+    background-color:#323232;
+    font-size:1rem;
+}
